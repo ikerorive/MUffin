@@ -1,0 +1,8 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #fff54e;
+	background: -webkit-linear-gradient(to bottom, #fff54e, #ffffff);
+	background: linear-gradient(to bottom, #fff54e, #ffffff);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
