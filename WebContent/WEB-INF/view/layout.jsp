@@ -26,15 +26,20 @@
 <script src="resources/MDB-Free_4.6.0/js/mdb.min.js"></script>
 </head>
 <body>
+
+	<img src="resources/img/party2.jpg" class="bg" />
+
 	<div align="right">
 		<tiles:insertAttribute name="header" />
 	</div>
-	<div align="center">
+	<div class="mainPage">
 		<tiles:insertAttribute name="body" />
 	</div>
-	<div style="clear: both" align="center">
+	<div  class="bottom">
 		<tiles:insertAttribute name="footer" />
 	</div>
+
+	<!--  <img src="resources/img/fun.png" class="fix" /> -->
 
 </body>
 </html>

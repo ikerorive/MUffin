@@ -35,10 +35,21 @@
 		<put-attribute name="body"
 			value="/WEB-INF/view/home.jsp" />
 	</definition>
-	
+
 	<definition name="register" extends="base.definition">
-		<put-attribute name="title" value="LOGIN" />
+		<put-attribute name="title" value="REGISTER" />
 		<put-attribute name="body"
 			value="/WEB-INF/view/register.jsp" />
+	</definition>
+	<definition name="questions" extends="base.definition">
+		<put-attribute name="title" value="QUESTIONS" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/questions.jsp" />
+	</definition>
+
+	<definition name="createEvento" extends="base.definition">
+		<put-attribute name="title" value="REGISTER" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/createEvent.jsp" />
 	</definition>
 </tiles-definitions>

@@ -8,7 +8,8 @@
  */
 
 /** @brief package service
- */package service;
+ */
+package service;
 
 import model.User;
 

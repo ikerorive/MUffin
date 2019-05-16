@@ -1,8 +1,33 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background: #fff54e;
-	background: -webkit-linear-gradient(to bottom, #fff54e, #ffffff);
-	background: linear-gradient(to bottom, #fff54e, #ffffff);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+}
+
+.bg {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	opacity: 0.9;
+	z-index: -1;
+}
+
+.mainPage {
+	margin: 50px;
+	height: 100%;
+}
+
+.bottom {
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.welcome {
+	height: 100%;
+	widrh: 100%;
+}
+
+#avatar {
+	border-radius: 50%;
+}
 }

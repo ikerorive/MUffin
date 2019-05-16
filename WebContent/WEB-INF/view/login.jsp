@@ -2,7 +2,7 @@
 
 <form:form action="/MUffin/loginSuccess"
 	method="post" modelAttribute="userCredential"
-	class="text-center p-5">
+	class="text-center p-5 mask rgba-white-light">
 
 	<p class="h4 mb-4">Sign in</p>
 

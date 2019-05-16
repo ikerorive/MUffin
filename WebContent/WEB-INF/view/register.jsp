@@ -1,7 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <form:form action="/MUffin/registerSuccess" method="post"
-	modelAttribute="user" class="text-center p-5">
+	modelAttribute="user" class="text-center p-5 mask rgba-white-light">
 
 	<p class="h4 mb-4">Register</p>
 	<!-- Username -->
@@ -19,8 +19,8 @@
 		<option value="1">Customer</option>
 		<option value="2">Business</option>
 	</select>
-	<!-- Sign up button -->
-	<button class="btn btn-info my-4 btn-block purple-gradient"
-		type="submit" value="Confirm">Sign up</button>
 
+	<!-- Sign up button -->
+	<button id="done-button" class="btn btn-info my-4 btn-block purple-gradient"
+		type="submit" value="Confirm">Sign up</button>
 </form:form>
