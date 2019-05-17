@@ -11,10 +11,20 @@
  */
 package dao.impl;
 
+import java.sql.Blob;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -54,11 +64,11 @@ public class UserDAOImpl implements UserDAO {
 		List<User> findByCriteriaNoHash = (List<User>) hibernateTemplate.findByCriteria(detachedCriteriaNoHash);
 		if (findByCriteriaNoHash != null && findByCriteriaNoHash.size() > 0) {
 			System.out.println("Username exists");
-			String salt=findByCriteriaNoHash.get(0).getSalt();
+			String salt = findByCriteriaNoHash.get(0).getSalt();
 			DetachedCriteria detachedCriteria = DetachedCriteria.forClass(User.class);
 			detachedCriteria.add(Restrictions.eq("username", username));
 			String sha256hex = new PassHash().getHashedPass(password, salt);
-			System.out.println("SALTED PASS: "+sha256hex);
+			System.out.println("SALTED PASS: " + sha256hex);
 			detachedCriteria.add(Restrictions.eq("password", sha256hex));
 			List<User> findByCriteria = (List<User>) hibernateTemplate.findByCriteria(detachedCriteria);
 			if (findByCriteria != null && findByCriteria.size() > 0)
@@ -70,6 +80,20 @@ public class UserDAOImpl implements UserDAO {
 			System.out.println("Username does not exist");
 			return null;
 		}
+
+	}
+
+	@Override
+	public void addAvatar(User user) {
+		Session session;
+		try {
+			session = getHibernateTemplate().getSessionFactory().getCurrentSession();
+		} catch (HibernateException e) {
+			session = getHibernateTemplate().getSessionFactory().openSession();
+		}
+		Transaction tx = session.beginTransaction();
+		session.saveOrUpdate(user);
+		tx.commit();
 
 	}
 }

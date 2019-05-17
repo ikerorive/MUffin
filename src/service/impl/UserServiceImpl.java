@@ -45,4 +45,10 @@ public class UserServiceImpl implements UserService {
 		User user = getUserDAO().getUserDetailsByUsernameAndPassword(username, password);
 		return user;
 	}
+
+	@Override
+	public void addAvatar(User user) {
+		// TODO Auto-generated method stub
+		getUserDAO().addAvatar(user);
+	}
 }

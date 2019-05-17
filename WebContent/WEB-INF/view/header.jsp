@@ -64,7 +64,9 @@
 					<div class="dropdown-menu dropdown-primary"
 						aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item"
-							href="/SpringMVCFormValidationPruebas/logOff">Log Off</a>
+							href="/MUffin/logOff">Log Off</a> <a
+							class="dropdown-item"
+							href="/MUffin/uploadAvatar">Change image</a>
 					</div></li>
 				<%
 					}

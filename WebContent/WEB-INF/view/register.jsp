@@ -21,6 +21,7 @@
 	</select>
 
 	<!-- Sign up button -->
-	<button id="done-button" class="btn btn-info my-4 btn-block purple-gradient"
-		type="submit" value="Confirm">Sign up</button>
+	<button id="done-button"
+		class="btn btn-info my-4 btn-block purple-gradient" type="submit"
+		value="Confirm">Sign up</button>
 </form:form>
