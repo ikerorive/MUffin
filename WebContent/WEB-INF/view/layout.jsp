@@ -5,7 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
+<link rel="stylesheet" type="text/css"
+	href="//fonts.googleapis.com/css?family=Pacifico" />
 <link rel="stylesheet" href="resources/css/stylesheet.css">
+<link rel="stylesheet" href="resources/css/animStylesheet.css">
+<link rel="stylesheet" href="resources/css/cardStylesheet.css">
 <!-- Font Awesome -->
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
@@ -25,7 +29,7 @@
 <!-- MDB core JavaScript -->
 <script src="resources/MDB-Free_4.6.0/js/mdb.min.js"></script>
 </head>
-<body>
+<body onload="getLocation()">
 
 	<img src="resources/img/party2.jpg" class="bg" />
 
@@ -35,7 +39,7 @@
 	<div class="mainPage">
 		<tiles:insertAttribute name="body" />
 	</div>
-	<div  class="bottom">
+	<div class="bottom">
 		<tiles:insertAttribute name="footer" />
 	</div>
 
@@ -43,3 +47,31 @@
 
 </body>
 </html>
+
+<script>
+	var longitude;
+	var latitude;
+	function f() {
+		getLocation();
+	}
+	setInterval(f, 60000)
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			var txt = "Geolocation is not supported by this browser.";
+			console.log(txt);
+
+		}
+	}
+
+	function showPosition(position) {
+		var txt = "Latitude: " + position.coords.latitude + "<br>Longitude: "
+				+ position.coords.longitude;
+		console.log(txt);
+		latitude= position.coords.latitude;
+		longitude= position.coords.longitude;
+
+	}
+</script>

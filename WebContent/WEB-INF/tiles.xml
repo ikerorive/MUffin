@@ -52,10 +52,16 @@
 		<put-attribute name="body"
 			value="/WEB-INF/view/createEvent.jsp" />
 	</definition>
-	
+
 	<definition name="uploadAvatar" extends="base.definition">
 		<put-attribute name="title" value="REGISTER" />
 		<put-attribute name="body"
 			value="/WEB-INF/view/uploadAvatar.jsp" />
+	</definition>
+
+	<definition name="eventoLista" extends="base.definition">
+		<put-attribute name="title" value="EVENTOS" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/eventoLista.jsp" />
 	</definition>
 </tiles-definitions>

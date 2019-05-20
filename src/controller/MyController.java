@@ -21,10 +21,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.nio.file.Files;
 import java.sql.Blob;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -43,6 +47,7 @@ import org.apache.tomcat.util.http.fileupload.FileItemFactory;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -170,9 +175,11 @@ public class MyController {
 			return new ModelAndView("createEvento");
 		}
 		User user = (User) session.getAttribute("user");
-
+		
+		evento.setDate(evento.getStrDate()+" "+evento.getStrHour());
 		evento.setCreador(Integer.toString(user.getIdUser()));
 		System.out.println(evento);
+
 		getEventoService().registerEvento(evento);
 		ModelAndView maw = new ModelAndView("home");
 
@@ -194,13 +201,14 @@ public class MyController {
 
 	@RequestMapping(value = "/questions", method = RequestMethod.GET)
 	public String questions(Model model) {
-
+		// System.out.println(getEventoService().getAllEventos());
 		return "questions";
 	}
 
 	@RequestMapping(value = "logOff", method = RequestMethod.GET)
 	public String logOff(HttpSession session) {
 		session.setAttribute("user", null);
+		session.setAttribute("avatar", null);
 		return "home";
 	}
 
@@ -208,6 +216,13 @@ public class MyController {
 	public String uploadAvatar(HttpSession session) {
 
 		return "uploadAvatar";
+	}
+
+	@RequestMapping(value = "eventoLista", method = RequestMethod.GET)
+	public String eventoLista(HttpSession session) {
+		List<Evento> listEventos = getEventoService().getAllEventos();
+		session.setAttribute("eventos", listEventos);
+		return "eventoLista";
 	}
 
 	@PostMapping("/uploadAction")

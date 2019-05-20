@@ -24,14 +24,12 @@
 %>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+<nav
+	class="navbar navbar-expand-lg navbar-light white scrolling-navbar ">
 	<div class="container">
 
 		<a href="/MUffin"><img src="resources/img/logoBlack.png"
 			height="36" width="36" alt="MUffin logo"></a>
-
-
-
 		<!-- Collapse -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -42,13 +40,23 @@
 
 		<!-- Links -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
 			<!-- Left -->
 			<ul class="navbar-nav mr-auto">
+				<%
+					if (session.getAttribute("user") == null) {
+				%>
 				<li class="nav-item"><a class="nav-link" href="/MUffin/login">Login</a></li>
 
 				<li class="nav-item"><a class="nav-link"
 					href="/MUffin/register">Register</a></li>
+				<%
+					} else {
+				%>
+				<li class="nav-item"><a class="nav-link"
+					 href="/MUffin/eventoLista">Eventos</a></li>
+				<%
+					}
+				%>
 			</ul>
 
 			<!-- Right -->
@@ -59,14 +67,14 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
 					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-						id="avatar" src="data:image/jpg;base64, <%=b64%>" alt="avatar"
-						height="36" width="36" /></a>
+						id="avatar" src="data:image/jpg;base64, <%=b64%>" alt=""
+						onerror="this.src='resources/img/defaul-avatar.jpg'" height="36"
+						width="36" /></a>
 					<div class="dropdown-menu dropdown-primary"
 						aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item"
-							href="/MUffin/logOff">Log Off</a> <a
-							class="dropdown-item"
-							href="/MUffin/uploadAvatar">Change image</a>
+						<a class="dropdown-item" href="/MUffin/logOff">Log Off</a> <a
+							class="dropdown-item" href="/MUffin/uploadAvatar">Change
+							image</a>
 					</div></li>
 				<%
 					}
@@ -78,3 +86,5 @@
 	</div>
 </nav>
 <!-- Navbar -->
+
+
