@@ -25,7 +25,7 @@
 
 <!-- Navbar -->
 <nav
-	class="navbar navbar-expand-lg navbar-light white scrolling-navbar ">
+	class="navbar navbar-expand-lg navbar-light white scrolling-navbar fixed-top">
 	<div class="container">
 
 		<a href="/MUffin"><img src="resources/img/logoBlack.png"
@@ -37,7 +37,7 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		
 		<!-- Links -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<!-- Left -->
@@ -53,7 +53,7 @@
 					} else {
 				%>
 				<li class="nav-item"><a class="nav-link"
-					 href="/MUffin/eventoLista">Eventos</a></li>
+					href="/MUffin/eventoLista">Eventos</a></li>
 				<%
 					}
 				%>

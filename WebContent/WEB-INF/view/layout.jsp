@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css"
 	href="//fonts.googleapis.com/css?family=Pacifico" />
 <link rel="stylesheet" href="resources/css/stylesheet.css">
+<link rel="stylesheet" href="resources/css/chat.css">
 <link rel="stylesheet" href="resources/css/animStylesheet.css">
 <link rel="stylesheet" href="resources/css/cardStylesheet.css">
 <!-- Font Awesome -->
@@ -36,6 +37,7 @@
 	<div align="right">
 		<tiles:insertAttribute name="header" />
 	</div>
+	<br><br><br><br>
 	<div class="mainPage">
 		<tiles:insertAttribute name="body" />
 	</div>

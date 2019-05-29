@@ -1,56 +1,112 @@
-<link rel="stylesheet"
-	href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-	crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-	integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-	crossorigin=""></script>
-<button type="button" class="btn btn-primary" data-toggle="modal"
-	data-target="#basicExampleModal">Launch demo modal</button>
+<div class="cards-container row d-flex justify-content-center m-2">
+	<div class="card">
+		<p class="card-title text-center">Questionquestionquestionquestion?</p>
+		<div class="card-body text-center">
+			<!-- Default inline 1-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="defaultInline1"
+					name="inlineDefaultRadiosExample" value="1"> <label
+					class="custom-control-label" for="defaultInline1">1</label>
+			</div>
 
-<!-- Modal -->
-<div class="modal fade" id="basicExampleModal" tabindex="-1"
-	role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Select the event location</h5>
-				<button type="button" class="close" data-dismiss="modal"
-					aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
+			<!-- Default inline 2-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="defaultInline2"
+					name="inlineDefaultRadiosExample" value="2"> <label
+					class="custom-control-label" for="defaultInline2">2</label>
 			</div>
-			<div class="modal-body">
-				<div id="mapid" style="width: 400px; height: 400px;"></div>
+
+			<!-- Default inline 3-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="defaultInline3"
+					name="inlineDefaultRadiosExample" value="3"> <label
+					class="custom-control-label" for="defaultInline3">3</label>
 			</div>
-			<div class="modal-footer">
-				
+			<!-- Default inline 4-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="defaultInline4"
+					name="inlineDefaultRadiosExample" value="4"> <label
+					class="custom-control-label" for="defaultInline4">4</label>
+			</div>
+			<!-- Default inline 5-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="defaultInline5"
+					name="inlineDefaultRadiosExample" value="5"> <label
+					class="custom-control-label" for="defaultInline5">5</label>
+
 			</div>
 		</div>
+
+	</div>
+
+
+	<div class="card">
+		<p class="card-title text-center">Questionquestionquestionquestion?</p>
+		<div class="card-body text-center">
+			<!-- Default inline 1-->
+			<div class="custom-control1 custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input"
+					id="1defaultInline1" name="1inlineDefaultRadiosExample" value="1">
+				<label class="custom-control-label" for="1defaultInline1">1</label>
+			</div>
+
+			<!-- Default inline 2-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input"
+					id="1defaultInline2" name="1inlineDefaultRadiosExample" value="2">
+				<label class="custom-control-label" for="1defaultInline2">2</label>
+			</div>
+
+			<!-- Default inline 3-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input"
+					id="1defaultInline3" name="1inlineDefaultRadiosExample" value="3">
+				<label class="custom-control-label" for="1defaultInline3">3</label>
+			</div>
+			<!-- Default inline 4-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input"
+					id="1defaultInline4" name="1inlineDefaultRadiosExample" value="4">
+				<label class="custom-control-label" for="1defaultInline4">4</label>
+			</div>
+			<!-- Default inline 5-->
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input"
+					id="1defaultInline5" name="1inlineDefaultRadiosExample" value="5">
+				<label class="custom-control-label" for="1defaultInline5">5</label>
+
+			</div>
+		</div>
+
 	</div>
 </div>
 
 
-<script>
-	var mymap = L.map('mapid').setView([ 43.0623377, -2.5073983 ], 14);
 
-	L
-			.tileLayer(
-					'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
-					{
-						maxZoom : 18,
-						attribution : 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, '
-								+ '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
-								+ 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-						id : 'mapbox.streets'
-					}).addTo(mymap);
 
-	var popup = L.popup();
+<form method="POST" enctype="multipart/form-data" action="uploadAction"
+	class="text-center p-5 mask rgba-white-light">
+	<button id="questionFinishBtn" class="btn purple-gradient"
+		type="submit">Finish</button>
 
-	function onMapClick(e) {
-		popup.setLatLng(e.latlng).setContent(
-				"You clicked the map at " + e.latlng.toString()).openOn(mymap);
-	}
+</form>
 
-	mymap.on('click', onMapClick);
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#questionFinishBtn").click(function() {
+
+			var favorite = [];
+
+			$.each($("input[type='radio']:checked"), function() {
+
+				favorite.push($(this).val());
+
+			});
+
+			alert("Selected values" + favorite.join(", "));
+
+		});
+
+	});
 </script>

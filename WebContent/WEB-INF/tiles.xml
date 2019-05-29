@@ -48,13 +48,13 @@
 	</definition>
 
 	<definition name="createEvento" extends="base.definition">
-		<put-attribute name="title" value="REGISTER" />
+		<put-attribute name="title" value="CREATE EVENT" />
 		<put-attribute name="body"
 			value="/WEB-INF/view/createEvent.jsp" />
 	</definition>
 
 	<definition name="uploadAvatar" extends="base.definition">
-		<put-attribute name="title" value="REGISTER" />
+		<put-attribute name="title" value="AVATAR" />
 		<put-attribute name="body"
 			value="/WEB-INF/view/uploadAvatar.jsp" />
 	</definition>
@@ -64,4 +64,21 @@
 		<put-attribute name="body"
 			value="/WEB-INF/view/eventoLista.jsp" />
 	</definition>
+
+	<definition name="chat" extends="base.definition">
+		<put-attribute name="title" value="CHAT" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/chat.jsp" />
+	</definition>
+	<definition name="pruebas" extends="base.definition">
+		<put-attribute name="title" value="PRUEBAS" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pruebas.jsp" />
+	</definition>
+	<definition name="eventoInfo" extends="base.definition">
+		<put-attribute name="title" value="EVENTO INFO" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/eventoInfo.jsp" />
+	</definition>
+
 </tiles-definitions>

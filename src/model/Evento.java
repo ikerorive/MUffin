@@ -56,6 +56,7 @@ public class Evento {
 	private String strDate;
 	@Transient
 	private String strHour;
+	
 
 	public String getLatitude() {
 		return latitude;

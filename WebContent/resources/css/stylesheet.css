@@ -1,6 +1,8 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
+	margin:0px;
+	padding:0px;
 }
 
 .bg {
@@ -8,12 +10,25 @@ body {
 	bottom: 0px;
 	width: 100%;
 	opacity: 0.9;
-	z-index: -1;
+	z-index: -100;
 }
+
+.evInfo h1 {
+	font-family: Pacifico;
+}
+
 
 .bottom {
 	position: fixed;
 	bottom: 0px;
+	text-align: center;
+	width: 100%;
+}
+
+
+.writeMsg {
+	position: fixed;
+	bottom: 40px;
 	text-align: center;
 	width: 100%;
 }
@@ -31,5 +46,17 @@ body {
 	border-radius: 50%;
 }
 
+
+
+.text-concat {
+	position: relative;
+	display: inline-block;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 1.2em;
+	/* (Number of lines you want visible) * (line-height) */
+	line-height: 1.2em;
+	text-align: justify;
+}
 
 }

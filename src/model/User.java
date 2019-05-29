@@ -19,6 +19,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -51,6 +52,19 @@ public class User {
 
 	@Column(name = "avatar")
 	private Blob avatar;
+
+	@Transient
+	private String respuestaPreguntas;
+	
+	
+	
+	public String getRespuestaPreguntas() {
+		return respuestaPreguntas;
+	}
+
+	public void setRespuestaPreguntas(String respuestaPreguntas) {
+		this.respuestaPreguntas = respuestaPreguntas;
+	}
 
 	public String getTipoUsuario() {
 		return tipoUsuario;

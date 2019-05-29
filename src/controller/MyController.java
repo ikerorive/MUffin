@@ -175,8 +175,8 @@ public class MyController {
 			return new ModelAndView("createEvento");
 		}
 		User user = (User) session.getAttribute("user");
-		
-		evento.setDate(evento.getStrDate()+" "+evento.getStrHour());
+
+		evento.setDate(evento.getStrDate() + " " + evento.getStrHour());
 		evento.setCreador(Integer.toString(user.getIdUser()));
 		System.out.println(evento);
 
@@ -218,10 +218,30 @@ public class MyController {
 		return "uploadAvatar";
 	}
 
+	@RequestMapping(value = "eventoInfo", method = RequestMethod.GET)
+	public String eventoInfo(HttpSession session) {
+
+		return "eventoInfo";
+	}
+
+	@RequestMapping(value = "chat", method = RequestMethod.GET)
+	public String chat(HttpSession session) {
+
+		return "chat";
+	}
+	
+	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
+	public String pruebas(HttpSession session) {
+
+		return "pruebas";
+	}
+	
+
 	@RequestMapping(value = "eventoLista", method = RequestMethod.GET)
-	public String eventoLista(HttpSession session) {
+	public String eventoLista(HttpSession session, Model model) {
 		List<Evento> listEventos = getEventoService().getAllEventos();
 		session.setAttribute("eventos", listEventos);
+		model.addAttribute("evento", new Evento());
 		return "eventoLista";
 	}
 
