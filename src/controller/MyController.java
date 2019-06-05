@@ -83,6 +83,7 @@ import json.Categoria;
 import json.Formulario;
 import json.ResposeList;
 import json.Respuesta;
+import json.UserCaracteristics;
 import model.Evento;
 import model.Questions;
 import model.User;
@@ -352,10 +353,34 @@ public class MyController {
 	@RequestMapping(value = "suscribeToEvent", method = RequestMethod.GET)
 	public String suscribeToEvent(HttpSession session) {
 		System.out.println("SE SUSCRIBE A EVENTO");
-		User user=(User) session.getAttribute("user");
-		Evento evto=(Evento) session.getAttribute("selectedEvent");
-		System.out.println("USER "+user.getIdUser());
-		System.out.println("EVENTO "+evto.getName());
+		User user = (User) session.getAttribute("user");
+		Evento evto = (Evento) session.getAttribute("selectedEvent");
+		System.out.println("USER " + user.getIdUser());
+		System.out.println("EVENTO " + evto.getName());
+		Client client = ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
+
+		UserCaracteristics userCaracteristics = client
+				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/uno")
+				.queryParam("idUser", user.getIdUser()).queryParam("idCategoria", evto.getEventType())
+				.request(MediaType.APPLICATION_JSON).get(UserCaracteristics.class);
+
+		ArrayList<UserCaracteristics> listUserCar = client
+				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/muchos")
+				.queryParam("idUser", user.getIdUser()).queryParam("idCategoria", evto.getEventType())
+				.request(MediaType.APPLICATION_JSON).get(ArrayList.class);
+		System.out.println("LISTA . -> " + listUserCar);
+		// Client cliente = ClientBuilder.newClient(new
+		// ClientConfig().register(LoggingFilter.class));
+		WebTarget webTarget = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacion");
+
+		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
+		invocationBuilder.put(Entity.entity(userCaracteristics, MediaType.APPLICATION_JSON));
+		
+		WebTarget webTarget2 = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacionMuchos");
+
+		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
+		invocationBuilder2.put(Entity.entity(listUserCar, MediaType.APPLICATION_JSON));
+
 		return "chat";
 	}
 
