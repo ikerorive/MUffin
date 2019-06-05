@@ -1,10 +1,9 @@
 <%@page import="java.util.*"%>
 <%@page import="model.Evento"%>
 <%
-		// retrieve your list from the request, with casting 
-		Evento evt = (Evento) session.getAttribute("selectedEvent");
-
-	%>
+	// retrieve your list from the request, with casting 
+	Evento evt = (Evento) session.getAttribute("selectedEvent");
+%>
 <link rel="stylesheet"
 	href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
 	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -15,10 +14,18 @@
 
 <div class="modal-body row">
 	<div class="col-md-6 mask m-2 rgba-white-strong h-100 evInfo">
-		<h1><%out.println(evt.getName());%></h1>
-		<small class="text-muted"><i class="far fa-clock"></i> <%out.println(evt.getDate());%></small>
+		<h1>
+			<%
+				out.println(evt.getName());
+			%>
+		</h1>
+		<small class="text-muted"><i class="far fa-clock"></i> <%
+ 	out.println(evt.getDate());
+ %></small>
 		<p>
-			<%out.println(evt.getDescription());%>
+			<%
+				out.println(evt.getDescription());
+			%>
 		</p>
 
 	</div>
@@ -36,7 +43,12 @@
 		<div id="mapid" style="width: 100%; height: 400px;"></div>
 
 		<script>
-			var mymap = L.map('mapid').setView([ <%out.print(evt.getLatitude());%>, <%out.print(evt.getLongitude());%> ], 14);
+			var mymap = L.map('mapid').setView(
+					[
+		<%out.print(evt.getLatitude());%>
+			,
+		<%out.print(evt.getLongitude());%>
+			], 14);
 
 			L
 					.tileLayer(
@@ -70,7 +82,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-			<!--  	<p>peio23</p>
+				<!--  	<p>peio23</p>
 				<p>mikel_mkl</p>
 				<p>anderp2</p>
 				<p>aitor33</p>
@@ -86,7 +98,7 @@
 				<p>erBixo</p>
 				<p>cabesa</p>
 				-->
-				
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -95,3 +107,23 @@
 
 	</div>
 </div>
+
+<script>
+	var respuesta;
+	$(document)
+			.ready(
+					function() {
+						fetch(
+								"http://localhost:8080/cambiarEventosServer/webresources/generic/uno",
+								{
+
+								}).then(function(response) {
+							response.text().then(function(text) {
+								console.log("RESPUESTA----> " + text);
+
+							});
+						})
+
+					});
+</script>
+

@@ -301,6 +301,12 @@
 			<version>1.19.4</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>2.3.4.Final</version>
+		</dependency>
+
 
 	</dependencies>
 	<build>

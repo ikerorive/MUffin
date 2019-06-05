@@ -44,6 +44,9 @@ public class Evento {
 	@Column(name = "date")
 	private String date;
 
+	@Column(name = "eventType")
+	private String eventType;
+
 	@NotEmpty
 	@Column(name = "latitude")
 	private String latitude;
@@ -56,7 +59,6 @@ public class Evento {
 	private String strDate;
 	@Transient
 	private String strHour;
-	
 
 	public String getLatitude() {
 		return latitude;
@@ -148,5 +150,13 @@ public class Evento {
 
 	public void setMaxSize(String maxSize) {
 		this.maxSize = maxSize;
+	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
 	}
 }

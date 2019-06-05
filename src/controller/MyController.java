@@ -31,7 +31,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -52,6 +55,7 @@ import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileItemFactory;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.jboss.resteasy.plugins.providers.jackson.ResteasyJacksonProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -77,6 +81,7 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
 
 import json.Categoria;
 import json.Formulario;
+import json.ResposeList;
 import json.Respuesta;
 import model.Evento;
 import model.Questions;
@@ -234,8 +239,8 @@ public class MyController {
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(
 				"http://localhost:8080/Muffin.v.2/webresources/generic{imgUrl}{date}{creador}{latitude}{name}{description}{maxSize}{longitude}",
-				String.class, evento.getImgUrl(), evento.getDate(), evento.getCreador(), evento.getLatitude(), evento.getName(), evento.getDescription(),
-				evento.getMaxSize(), evento.getLongitude());
+				String.class, evento.getImgUrl(), evento.getDate(), evento.getCreador(), evento.getLatitude(),
+				evento.getName(), evento.getDescription(), evento.getMaxSize(), evento.getLongitude());
 		System.out.println(result);
 		ModelAndView maw = new ModelAndView("home");
 
@@ -344,6 +349,16 @@ public class MyController {
 		return "eventoInfo";
 	}
 
+	@RequestMapping(value = "suscribeToEvent", method = RequestMethod.GET)
+	public String suscribeToEvent(HttpSession session) {
+		System.out.println("SE SUSCRIBE A EVENTO");
+		User user=(User) session.getAttribute("user");
+		Evento evto=(Evento) session.getAttribute("selectedEvent");
+		System.out.println("USER "+user.getIdUser());
+		System.out.println("EVENTO "+evto.getName());
+		return "chat";
+	}
+
 	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
 	public String pruebas(HttpSession session) {
 
@@ -360,8 +375,39 @@ public class MyController {
 
 	@RequestMapping(value = "eventoLista", method = RequestMethod.GET)
 	public String eventoLista(HttpSession session, Model model) {
+
+		// Client client = ClientBuilder.newClient().; ///
+		// Muffin.v.2/webresources/generic
+
+		Client client = ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
+
+		ResposeList orden = client.target("http://localhost:8080/ordernarEventosServer2/webresources/controller")
+				.queryParam("id", 2).request(MediaType.APPLICATION_JSON).get(ResposeList.class);
+		System.out.println("RESPUESTA WS----> " + orden.getList());
+
 		List<Evento> listEventos = getEventoService().getAllEventos();
-		session.setAttribute("eventos", listEventos);
+		LinkedHashMap<Integer, ArrayList<Evento>> hm = new LinkedHashMap<>();
+		for (Integer i : orden.getList()) {
+			System.out.println("Numero orden: " + i);
+			ArrayList<Evento> ar = new ArrayList<>();
+			hm.put(i, ar);
+		}
+		for (Evento e : listEventos) {
+			System.out.println("EVENT TYPE -----> " + e.getEventType());
+			// System.out.println(e.ge);
+
+			hm.get(Integer.parseInt(e.getEventType())).add(e);
+		}
+
+		ArrayList<Evento> evOrdenados = new ArrayList<>();
+		for (Map.Entry<Integer, ArrayList<Evento>> entry : hm.entrySet()) {
+			System.out.println("ORDEN HASHMAP----> " + entry.getKey());
+			evOrdenados.addAll(entry.getValue());
+
+			// System.out.println("clave=" + entry.getKey() + ", valor=" +
+			// entry.getValue());
+		}
+		session.setAttribute("eventos", evOrdenados);
 		// model.addAttribute("evento", new Evento());
 		return "eventoLista";
 	}

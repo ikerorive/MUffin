@@ -2,8 +2,8 @@
 <div class="d-flex justify-content-around py-0 chatTop">
 	<a href="/MUffin/eventoInfo" class=" btn purple-gradient"> <i
 		class="fas fa-info"></i>
-	</a>
-	<button class="btn py-0 purple-gradient" id="suscribeButton">Subscribe</button>
+	</a> <a href="/MUffin/suscribeToEvent" class="btn purple-gradient"
+		id="suscribeButton">Subscribe</a>
 </div>
 <div class="whiteBg"></div>
 <br>
