@@ -3,10 +3,11 @@
 	<a href="/MUffin/eventoInfo" class=" btn purple-gradient"> <i
 		class="fas fa-info"></i>
 	</a>
-	<button class="btn py-0 purple-gradient">Subscribe</button>
+	<button class="btn py-0 purple-gradient" id="suscribeButton">Subscribe</button>
 </div>
 <div class="whiteBg"></div>
- 	<br><br>
+<br>
+<br>
 <!-- ------------------------------------------------------------------------ -->
 
 <div class="d-flex justify-content-center">
@@ -286,3 +287,22 @@
 	</div>
 	<!--Grid row-->
 </div>
+
+<script>
+	var respuesta;
+	$(document)
+			.ready(
+					function() {
+						fetch(
+								"http://localhost:8080/CalculadoraREST/calculadora/suma?oper1=5&oper2=6",
+								{
+
+								}).then(function(response) {
+							response.text().then(function(text) {
+								console.log("RESPUESTA----> " + text);
+
+							});
+						})
+
+					});
+</script>

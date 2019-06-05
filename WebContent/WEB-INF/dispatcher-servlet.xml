@@ -63,6 +63,7 @@
 
 		<property name="annotatedClasses">
 			<array>
+				<value>model.Questions</value>
 				<value>model.User</value>
 				<value>model.Evento</value>
 			</array>

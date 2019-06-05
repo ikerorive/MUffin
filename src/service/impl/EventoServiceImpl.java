@@ -39,4 +39,16 @@ public class EventoServiceImpl implements EventoService {
 		return getEventoDAO().getAllEventos();
 	}
 
+	@Override
+	public Evento getEvento(int id) {
+		// TODO Auto-generated method stub
+		return getEventoDAO().getEvento(id);
+	}
+
+	@Override
+	public List<Evento> getEventosByCreator(int idCreador) {
+		// TODO Auto-generated method stub
+		return getEventoDAO().getEventosByCreator(idCreador);
+	}
+
 }

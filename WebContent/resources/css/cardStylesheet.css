@@ -37,6 +37,7 @@ border-width: 50px 50px 0 0;
 	height: 220px;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
+	
 }
 
 .card-container:hover .card {

@@ -30,7 +30,7 @@
 <!-- MDB core JavaScript -->
 <script src="resources/MDB-Free_4.6.0/js/mdb.min.js"></script>
 </head>
-<body onload="getLocation()">
+<body>
 
 	<img src="resources/img/party2.jpg" class="bg" />
 
@@ -50,30 +50,3 @@
 </body>
 </html>
 
-<script>
-	var longitude;
-	var latitude;
-	function f() {
-		getLocation();
-	}
-	setInterval(f, 60000)
-
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-		} else {
-			var txt = "Geolocation is not supported by this browser.";
-			console.log(txt);
-
-		}
-	}
-
-	function showPosition(position) {
-		var txt = "Latitude: " + position.coords.latitude + "<br>Longitude: "
-				+ position.coords.longitude;
-		console.log(txt);
-		latitude= position.coords.latitude;
-		longitude= position.coords.longitude;
-
-	}
-</script>

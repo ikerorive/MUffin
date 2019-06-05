@@ -1,4 +1,10 @@
+<%@page import="java.util.*"%>
+<%@page import="model.Evento"%>
+<%
+		// retrieve your list from the request, with casting 
+		Evento evt = (Evento) session.getAttribute("selectedEvent");
 
+	%>
 <link rel="stylesheet"
 	href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
 	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -9,40 +15,10 @@
 
 <div class="modal-body row">
 	<div class="col-md-6 mask m-2 rgba-white-strong h-100 evInfo">
-		<h1>Title</h1>
-		<small class="text-muted"><i class="far fa-clock"></i> 12:00
-			31/01/2019</small>
+		<h1><%out.println(evt.getName());%></h1>
+		<small class="text-muted"><i class="far fa-clock"></i> <%out.println(evt.getDate());%></small>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipiscing elit malesuada,
-			fusce sem natoque urna odio euismod cum, rhoncus semper ultricies non
-			viverra mollis justo. Sagittis ac tortor eu sapien molestie quam
-			tellus placerat, semper facilisi litora est a iaculis sed, morbi
-			penatibus nascetur nullam mi posuere feugiat. Potenti pharetra
-			molestie placerat scelerisque ac nascetur fringilla eros massa, porta
-			arcu posuere vel libero urna velit natoque. Placerat erat suscipit
-			urna quis sem dapibus tincidunt duis sodales, massa in vehicula nunc
-			maecenas lobortis etiam sagittis metus, dictum turpis porta habitant
-			nec ullamcorper per eros. Vehicula penatibus mollis curabitur
-			tristique varius sociis condimentum fusce morbi dignissim taciti
-			inceptos pellentesque, non mattis semper cubilia ac pharetra egestas
-			porta elementum turpis eu consequat. Et nam luctus platea felis
-			tincidunt sociis, placerat himenaeos eget facilisis curae etiam, cum
-			mauris pharetra donec viverra. <br> <br> Lorem ipsum dolor
-			sit amet consectetur adipiscing elit malesuada, fusce sem natoque
-			urna odio euismod cum, rhoncus semper ultricies non viverra mollis
-			justo. Sagittis ac tortor eu sapien molestie quam tellus placerat,
-			semper facilisi litora est a iaculis sed, morbi penatibus nascetur
-			nullam mi posuere feugiat. Potenti pharetra molestie placerat
-			scelerisque ac nascetur fringilla eros massa, porta arcu posuere vel
-			libero urna velit natoque. Placerat erat suscipit urna quis sem
-			dapibus tincidunt duis sodales, massa in vehicula nunc maecenas
-			lobortis etiam sagittis metus, dictum turpis porta habitant nec
-			ullamcorper per eros. Vehicula penatibus mollis curabitur tristique
-			varius sociis condimentum fusce morbi dignissim taciti inceptos
-			pellentesque, non mattis semper cubilia ac pharetra egestas porta
-			elementum turpis eu consequat. Et nam luctus platea felis tincidunt
-			sociis, placerat himenaeos eget facilisis curae etiam, cum mauris
-			pharetra donec viverra.
+			<%out.println(evt.getDescription());%>
 		</p>
 
 	</div>
@@ -60,7 +36,7 @@
 		<div id="mapid" style="width: 100%; height: 400px;"></div>
 
 		<script>
-			var mymap = L.map('mapid').setView([ 43.0623377, -2.5073983 ], 14);
+			var mymap = L.map('mapid').setView([ <%out.print(evt.getLatitude());%>, <%out.print(evt.getLongitude());%> ], 14);
 
 			L
 					.tileLayer(
@@ -94,7 +70,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>peio23</p>
+			<!--  	<p>peio23</p>
 				<p>mikel_mkl</p>
 				<p>anderp2</p>
 				<p>aitor33</p>
@@ -109,7 +85,7 @@
 				<p>donMubarak</p>
 				<p>erBixo</p>
 				<p>cabesa</p>
-				
+				-->
 				
 			</div>
 			<div class="modal-footer">

@@ -41,7 +41,29 @@ public class EventoDAOImpl implements EventoDAO {
 	@Override
 	public List<Evento> getAllEventos() {
 		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Evento.class);
-		//detachedCriteria.add(Restrictions.eq("name", "sebesa"));
+		// detachedCriteria.add(Restrictions.eq("name", "sebesa"));
+		List<Evento> findByCriteria = (List<Evento>) hibernateTemplate.findByCriteria(detachedCriteria);
+		if (findByCriteria != null && findByCriteria.size() > 0)
+			return findByCriteria;
+		else
+			return null;
+	}
+
+	@Override
+	public Evento getEvento(int id) {
+		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Evento.class);
+		detachedCriteria.add(Restrictions.eq("id", id));
+		List<Evento> findByCriteria = (List<Evento>) hibernateTemplate.findByCriteria(detachedCriteria);
+		if (findByCriteria != null && findByCriteria.size() > 0)
+			return findByCriteria.get(0);
+		else
+			return null;
+	}
+
+	@Override
+	public List<Evento> getEventosByCreator(int idCreador) {
+		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Evento.class);
+		detachedCriteria.add(Restrictions.eq("creador", Integer.toString(idCreador)));
 		List<Evento> findByCriteria = (List<Evento>) hibernateTemplate.findByCriteria(detachedCriteria);
 		if (findByCriteria != null && findByCriteria.size() > 0)
 			return findByCriteria;

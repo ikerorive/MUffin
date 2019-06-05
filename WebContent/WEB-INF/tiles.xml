@@ -80,5 +80,11 @@
 		<put-attribute name="body"
 			value="/WEB-INF/view/eventoInfo.jsp" />
 	</definition>
+	
+	<definition name="misEventos" extends="base.definition">
+		<put-attribute name="title" value="MIS EVENTOS" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/misEventos.jsp" />
+	</definition>
 
 </tiles-definitions>

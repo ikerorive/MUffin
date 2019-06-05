@@ -28,7 +28,9 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -41,6 +43,10 @@ import javax.servlet.http.HttpSession;
 import javax.sql.rowset.serial.SerialBlob;
 import javax.sql.rowset.serial.SerialException;
 import javax.validation.Valid;
+import javax.ws.rs.client.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.UriBuilder;
 
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileItemFactory;
@@ -51,19 +57,33 @@ import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.google.gson.Gson;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.config.ClientConfig;
+import com.sun.jersey.api.client.config.DefaultClientConfig;
+import com.sun.jersey.core.util.MultivaluedMapImpl;
+
+import json.Categoria;
+import json.Formulario;
+import json.Respuesta;
 import model.Evento;
+import model.Questions;
 import model.User;
 import model.UserCredential;
 import service.EventoService;
+import service.QuestionsService;
 import service.UserService;
 
 @Controller
@@ -91,6 +111,17 @@ public class MyController {
 		this.eventoService = eventoService;
 	}
 
+	@Autowired
+	private QuestionsService questionsService;
+
+	public QuestionsService getQuestionsService() {
+		return questionsService;
+	}
+
+	public void setQuestionsService(QuestionsService questionsService) {
+		this.questionsService = questionsService;
+	}
+
 	///////////////////////////////////////////////////////////////////
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String homePage(HttpSession session) {
@@ -115,27 +146,30 @@ public class MyController {
 		User user = getUserService().validateUserCredential(userCredential.getUsername(), userCredential.getPassword());
 		session.setAttribute("avatar", null);
 		session.setAttribute("user", null);
-		if (user.getAvatar() != null) {
-			try {
-				InputStream in = user.getAvatar().getBinaryStream();
-				BufferedImage image = ImageIO.read(in);
-				session.setAttribute("avatar", image);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				System.out.println("Caught an IllegalArgumentException..." + e.getMessage());
-			}
-		}
+
 		if (user != null) {
 			session.setAttribute("user", user);
+			if (user.getAvatar() != null) {
+				try {
+					InputStream in = user.getAvatar().getBinaryStream();
+					BufferedImage image = ImageIO.read(in);
+					session.setAttribute("avatar", image);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					System.out.println("Caught an IllegalArgumentException..." + e.getMessage());
+				}
+			}
+
 			return modelAndView;
 		} else {
 			modelAndView = new ModelAndView("notFound");
 		}
+
 		return modelAndView;
 	}
 
@@ -160,6 +194,9 @@ public class MyController {
 		System.out.println(user);
 		ModelAndView maw;
 		if (user.getTipoUsuario().equals("1")) {
+			List<Questions> listQuestions = getQuestionsService().getAllQuestions();
+			System.out.println(listQuestions);
+			session.setAttribute("questions", listQuestions);
 			maw = new ModelAndView("questions");
 		} else {
 			maw = new ModelAndView("home");
@@ -178,12 +215,85 @@ public class MyController {
 
 		evento.setDate(evento.getStrDate() + " " + evento.getStrHour());
 		evento.setCreador(Integer.toString(user.getIdUser()));
-		System.out.println(evento);
 
-		getEventoService().registerEvento(evento);
+///http://localhost:8080//Muffin.v.2/webresources/generic/aplicacion/{creador}/{description}/{name}/{imgUrl}/{maxSize}/{date}/{latitude}/{longitude}/
+		/*
+		 * Client client = ClientBuilder.newClient(); ///
+		 * Muffin.v.2/webresources/generic
+		 * client.target("http://localhost:8080/Muffin.v.2/webresources/generic")
+		 * .queryParam("creador", evento.getCreador()).queryParam("description",
+		 * evento.getDescription()) .queryParam("name",
+		 * evento.getName()).queryParam("imgUrl", evento.getImgUrl())
+		 * .queryParam("maxSize", evento.getMaxSize()).queryParam("date",
+		 * evento.getDate()) .queryParam("latitude",
+		 * evento.getLatitude()).queryParam("longitude", evento.getLongitude())
+		 * .request("text/plain").put(Entity.json(null));
+		 * System.out.println("RESPUESTA WS----> " );
+		 */
+		// getEventoService().registerEvento(evento);
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(
+				"http://localhost:8080/Muffin.v.2/webresources/generic{imgUrl}{date}{creador}{latitude}{name}{description}{maxSize}{longitude}",
+				String.class, evento.getImgUrl(), evento.getDate(), evento.getCreador(), evento.getLatitude(), evento.getName(), evento.getDescription(),
+				evento.getMaxSize(), evento.getLongitude());
+		System.out.println(result);
 		ModelAndView maw = new ModelAndView("home");
 
 		return maw;
+
+	}
+
+	@PostMapping("/selectEventSuccess")
+	public String selectEventSuccess(@RequestParam("eventId") int id, RedirectAttributes redirectAttributes,
+			HttpSession session) {
+
+		Evento evt = getEventoService().getEvento(id);
+		session.setAttribute("selectedEvent", evt);
+
+		return "chat";
+
+	}
+
+	@PostMapping("/formularioSuccess")
+	public String formularioSuccess(@RequestParam("answers") String answers, RedirectAttributes redirectAttributes,
+			HttpSession session) {
+		List<String> items = Arrays.asList(answers.split(","));
+		System.out.println("RESPUESTAS   ----> " + items);
+		Formulario form = new Formulario();
+		User us = (User) session.getAttribute("user");
+		form.setId(us.getIdUser());
+		HashMap<String, ArrayList<Integer>> hm = new HashMap<>();
+		form.setCategorias(new ArrayList<>());
+		for (String respuesta : items) {
+			String[] rp = respuesta.split("-");
+			String key = rp[0];
+			int punt = Integer.parseInt(rp[1]);
+			if (!hm.containsKey(key)) {
+				hm.put(key, new ArrayList<Integer>());
+			}
+			hm.get(key).add(punt);
+		}
+		ArrayList<Categoria> arraycat = new ArrayList<>();
+		for (String key : hm.keySet()) {
+			ArrayList<Respuesta> arrayResp = new ArrayList<>();
+			Respuesta resp = new Respuesta();
+			ArrayList<Integer> arrayInt = hm.get(key);
+			resp.setPregunta1(arrayInt.get(0));
+			resp.setPregunta2(arrayInt.get(1));
+			resp.setPregunta3(arrayInt.get(2));
+			resp.setPregunta4(arrayInt.get(3));
+			resp.setPregunta5(arrayInt.get(4));
+			arrayResp.add(resp);
+			Categoria c = new Categoria();
+			c.setNombre(key);
+			c.setRespuestas(arrayResp);
+			form.getCategorias().add(c);
+		}
+
+		Gson gson = new Gson();
+		String json = gson.toJson(form);
+		System.out.println(json);
+		return "redirect:/";
 
 	}
 
@@ -200,8 +310,18 @@ public class MyController {
 	}
 
 	@RequestMapping(value = "/questions", method = RequestMethod.GET)
-	public String questions(Model model) {
+	public String questions(Model model, HttpSession session) {
 		// System.out.println(getEventoService().getAllEventos());
+
+		Client client = ClientBuilder.newClient();
+
+		String bal = client.target("http://localhost:8080/CalculadoraREST/calculadora/suma").queryParam("oper1", 4)
+				.queryParam("oper2", 5).request("text/plain").get(String.class);
+		System.out.println("Respuesta WS ----> " + bal);
+
+		List<Questions> listQuestions = getQuestionsService().getAllQuestions();
+		System.out.println(listQuestions);
+		session.setAttribute("questions", listQuestions);
 		return "questions";
 	}
 
@@ -224,24 +344,34 @@ public class MyController {
 		return "eventoInfo";
 	}
 
-	@RequestMapping(value = "chat", method = RequestMethod.GET)
-	public String chat(HttpSession session) {
-
-		return "chat";
-	}
-	
 	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
 	public String pruebas(HttpSession session) {
 
+		Client client = ClientBuilder.newClient();
+		User user = new User();
+		user.setIdUser(44);
+		user.setUsername("userPruebas");
+		String s = client.target("http://localhost:8080/MuffinRMQ/webresources/generic/crear").queryParam("id", 4)
+				.queryParam("descripcion", "asdasdasddsasdads").queryParam("user", user).request("text/plain")
+				.get(String.class);
+		System.out.println(s);
 		return "pruebas";
 	}
-	
 
 	@RequestMapping(value = "eventoLista", method = RequestMethod.GET)
 	public String eventoLista(HttpSession session, Model model) {
 		List<Evento> listEventos = getEventoService().getAllEventos();
 		session.setAttribute("eventos", listEventos);
-		model.addAttribute("evento", new Evento());
+		// model.addAttribute("evento", new Evento());
+		return "eventoLista";
+	}
+
+	@RequestMapping(value = "misEventos", method = RequestMethod.GET)
+	public String misEventos(HttpSession session, Model model) {
+		User user = (User) session.getAttribute("user");
+		List<Evento> listEventos = getEventoService().getEventosByCreator(user.getIdUser());
+		session.setAttribute("eventos", listEventos);
+		// model.addAttribute("evento", new Evento());
 		return "eventoLista";
 	}
 

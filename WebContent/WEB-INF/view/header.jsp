@@ -3,7 +3,7 @@
 <%@page import="javax.imageio.ImageIO"%>
 <%@page import="java.io.*"%>
 
-
+<%@page import="model.User"%>
 <%
 	String b64 = "";
 
@@ -37,7 +37,7 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		
+
 		<!-- Links -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<!-- Left -->
@@ -51,10 +51,22 @@
 					href="/MUffin/register">Register</a></li>
 				<%
 					} else {
+						User user = (User) session.getAttribute("user");
+						if (user.getTipoUsuario().equals("1")) {
 				%>
 				<li class="nav-item"><a class="nav-link"
 					href="/MUffin/eventoLista">Eventos</a></li>
 				<%
+					} else {
+				%>
+
+				<li class="nav-item"><a class="nav-link"
+					href="/MUffin/createEvento">Crear evento</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="/MUffin/misEventos">Mis eventos</a></li>
+				<%
+					}
 					}
 				%>
 			</ul>
