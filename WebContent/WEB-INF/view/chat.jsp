@@ -1,3 +1,18 @@
+<%@page import="java.util.*"%>
+<%@page import="model.Evento"%>
+<%@page import="model.User"%>
+<%
+	// retrieve your list from the request, with casting 
+	Evento evt = (Evento) session.getAttribute("selectedEvent");
+	User user = (User) session.getAttribute("user");
+%>
+
+<input type="hidden" id="userId"
+	value="<%out.print(user.getIdUser());%>" />
+<input type="hidden" id="username"
+	value="<%out.print(user.getUsername());%>" />
+<input type="hidden" id="eventoId"
+	value="<%out.print(evt.getIdEvento());%>" />
 <img src="resources/img/party2.jpg" class="bgChat" />
 <div class="d-flex justify-content-around py-0 chatTop">
 	<a href="/MUffin/eventoInfo" class=" btn purple-gradient"> <i
@@ -13,243 +28,19 @@
 <div class="d-flex justify-content-center">
 	<div class="chat-message ">
 		<ul class="chat">
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
 			<li class="right clearfix">
 				<div class="chat-body clearfix">
 					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
+						<strong class="primary-font">MUffin Team</strong> <small
 							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
+						</small>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
+					<p>Se debe observar respeto y buenas maneras a la hora de
+						expresarse. No se pueden publicar mensajes que puedan ofender a
+						otros usuarios del foro o tengan contenido racista o sexista.</p>
 				</div>
 			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix"><span class="chat-img float-right">
 
-			</span>
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div></li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix"><span class="chat-img float-right">
-
-			</span>
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div></li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
-			<li class="left clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">John Doe</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							12 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</li>
-			<li class="right clearfix"><span class="chat-img float-right">
-
-			</span>
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div></li>
-			<li class="right clearfix">
-				<div class="chat-body clearfix">
-					<div class="header">
-						<strong class="primary-font">Sarah</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
-							13 mins ago</small>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales
-						at.</p>
-				</div>
-			</li>
 		</ul>
 	</div>
 </div>
@@ -272,10 +63,12 @@
 		<div>
 
 			<form class="input-group">
-				<input type="text" class="form-control form-control-sm"
-					placeholder="Your message" aria-describedby="basic-addon2">
+				<input id="messageField" type="text"
+					class="form-control form-control-sm" placeholder="Your message"
+					aria-describedby="basic-addon2">
 				<div class="input-group-append">
-					<button class="btn btn-sm purple-gradient my-0" type="button">
+					<button id="txtEnviar" class="btn btn-sm purple-gradient my-0"
+						type="button">
 						<i class="far fa-paper-plane"></i>
 					</button>
 				</div>
@@ -289,20 +82,195 @@
 </div>
 
 <script>
-	var respuesta;
+	//http://localhost:8080/Muffin.v.2/webresources/generic/crearEvento?oper1=5&oper2=6
 	$(document)
 			.ready(
 					function() {
+
+						var username = $("#username").val();
+
+						var eventoid = $("#eventoId").val();
+
 						fetch(
-								"http://localhost:8080/CalculadoraREST/calculadora/suma?oper1=5&oper2=6",
-								{
+								"http://localhost:8080/Muffin.v.2/webresources/generic/getMensajeInicio?chatId="
+										+ eventoid, {
 
-								}).then(function(response) {
-							response.text().then(function(text) {
-								console.log("RESPUESTA----> " + text);
+								})
+								.then(
+										function(response) {
+											response
+													.json()
+													.then(
+															function(json) {
+																$(".mezua")
+																		.remove();
+																var str = JSON
+																		.stringify(
+																				json,
+																				null,
+																				2);
+																var obj = JSON
+																		.parse(str);
+																var array = (obj.array);
+																array
+																		.forEach(function(
+																				valor,
+																				indice,
+																				array) {
+																			//console.log("En el índice " + indice + " hay este valor: " + valor);
+																			var array1 = valor
+																					.split(";");
 
-							});
-						})
+																			var html;
+																			if (username == array1[0]) {
+																				console
+																						.log("ES IGUAL "
+																								+ username
+																								+ " "
+																								+ array1[0]);
+																				html = '<li class="right clearfix mezua">';
+																				//lado="right";
+																			} else {
+																				console
+																						.log("NO ES IGUAL "
+																								+ username
+																								+ " "
+																								+ array1[0]);
+																				html = '<li class="left clearfix mezua">';
+																				//lador="left";
+																			}
+
+																			html += '<div class="chat-body clearfix">';
+																			html += '<div class="header">';
+																			html += '<strong class="primary-font">'
+																					+ array1[0]
+																					+ '</strong> <small'   
+																			html +='class="float-right text-muted"><i class="far fa-clock"></i>';
+																			html += ''
+																					+ array1[2]
+																					+ '</small>';
+																			html += '</div>';
+																			html += '<p>'
+																					+ array1[1]
+																					+ '</p>';
+																			html += '</div>';
+																			$(
+																					".chat")
+																					.append(
+																							html);
+																			//appendMyMessage();
+
+																		});
+																//appendMyMessage();
+															});
+										})
 
 					});
+	$("#txtEnviar")
+			.click(
+					function() {
+
+						var msg = $("#messageField").val();
+						var username = $("#username").val();
+						console.log("USERNAME " + username);
+						var userid = $("#userId").val();
+						console.log("USERID " + userid);
+						var eventoid = $("#eventoId").val();
+						console.log(msg + username + userid + eventoid);
+						fetch(
+								"http://localhost:8080/Muffin.v.2/webresources/generic/enviarMensaje?userId="
+										+ userid + "&username=" + username
+										+ "&mensaje=" + msg + "&chatId="
+										+ eventoid, {
+
+								})
+								.then(
+										function(response) {
+											response
+													.json()
+													.then(
+															function(json) {
+																$(".mezua")
+																		.remove();
+																var str = JSON
+																		.stringify(
+																				json,
+																				null,
+																				2);
+																var obj = JSON
+																		.parse(str);
+																var array = (obj.array);
+																array
+																		.forEach(function(
+																				valor,
+																				indice,
+																				array) {
+																			//console.log("En el índice " + indice + " hay este valor: " + valor);
+																			var array1 = valor
+																					.split(";");
+
+																			var html;
+																			if (username == array1[0]) {
+																				console
+																						.log("ES IGUAL "
+																								+ username
+																								+ " "
+																								+ array1[0]);
+																				html = '<li class="right clearfix mezua">';
+																				//lado="right";
+																			} else {
+																				console
+																						.log("NO ES IGUAL "
+																								+ username
+																								+ " "
+																								+ array1[0]);
+																				html = '<li class="left clearfix mezua">';
+																				//lador="left";
+																			}
+
+																			html += '<div class="chat-body clearfix">';
+																			html += '<div class="header">';
+																			html += '<strong class="primary-font">'
+																					+ array1[0]
+																					+ '</strong> <small'   
+																			html +='class="float-right text-muted"><i class="far fa-clock"></i>';
+																			html += ''
+																					+ array1[2]
+																					+ '</small>';
+																			html += '</div>';
+																			html += '<p>'
+																					+ array1[1]
+																					+ '</p>';
+																			html += '</div>';
+																			$(
+																					".chat")
+																					.append(
+																							html);
+																			//appendMyMessage();
+
+																		});
+																appendMyMessage();
+															});
+										})
+
+					});
+
+	function appendMyMessage() {
+
+		var html;
+
+		html = '<li class="right clearfix mezua">';
+
+		html += '<div class="chat-body clearfix">';
+		html += '<div class="header">';
+		html += '<strong class="primary-font"> ' + $("#username").val();
+		+' </strong>';
+		html += '</div>';
+		html += '<p>' + $("#messageField").val();
+		+'</p>';
+		html += '</div>';
+		$(".chat").append(html);
+		$("#messageField").val("");
+
+	}
 </script>
