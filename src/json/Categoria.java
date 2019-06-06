@@ -31,4 +31,11 @@ public class Categoria {
     public void setRespuestas(List<Respuesta> respuestas) {
         this.respuestas = respuestas;
     }
+
+	@Override
+	public String toString() {
+		return this.getNombre() +this.getRespuestas();
+	}
+    
+    
 }    
