@@ -51,10 +51,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.UriBuilder;
 
+import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.PoolingClientConnectionManager;
+import org.apache.http.impl.conn.SchemeRegistryFactory;
+import org.apache.http.params.HttpParams;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileItemFactory;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.jboss.resteasy.client.jaxrs.ResteasyClient;
+import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.plugins.providers.jackson.ResteasyJacksonProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -95,6 +102,8 @@ import service.UserService;
 
 @Controller
 public class MyController {
+	final ResteasyClient client = new ResteasyClientBuilder().connectionPoolSize(10).maxPooledPerRoute(5)
+			.register(ResteasyJacksonProvider.class).build();
 
 	@Autowired
 	private UserService userService;
@@ -222,28 +231,25 @@ public class MyController {
 
 		evento.setDate(evento.getStrDate() + " " + evento.getStrHour());
 		evento.setCreador(Integer.toString(user.getIdUser()));
-
-///http://localhost:8080//Muffin.v.2/webresources/generic/aplicacion/{creador}/{description}/{name}/{imgUrl}/{maxSize}/{date}/{latitude}/{longitude}/
 		/*
-		 * Client client = ClientBuilder.newClient(); ///
-		 * Muffin.v.2/webresources/generic
-		 * client.target("http://localhost:8080/Muffin.v.2/webresources/generic")
-		 * .queryParam("creador", evento.getCreador()).queryParam("description",
-		 * evento.getDescription()) .queryParam("name",
-		 * evento.getName()).queryParam("imgUrl", evento.getImgUrl())
-		 * .queryParam("maxSize", evento.getMaxSize()).queryParam("date",
-		 * evento.getDate()) .queryParam("latitude",
-		 * evento.getLatitude()).queryParam("longitude", evento.getLongitude())
-		 * .request("text/plain").put(Entity.json(null));
-		 * System.out.println("RESPUESTA WS----> " );
+		 * public void crearEvento(@QueryParam("creador") String creador,
+		 * 
+		 * @QueryParam("description") String description, @QueryParam("name") String
+		 * name,
+		 * 
+		 * @QueryParam("imgUrl") String imgUrl, @QueryParam("maxSize") String maxSize,
+		 * 
+		 * @QueryParam("date") String date, @QueryParam("latitude") String
+		 * latitude, @QueryParam("longitude") String longitude, @QueryParam("eventType")
+		 * int eventType) {
 		 */
-		// getEventoService().registerEvento(evento);
-		RestTemplate restTemplate = new RestTemplate();
-		String result = restTemplate.getForObject(
-				"http://localhost:8080/Muffin.v.2/webresources/generic{imgUrl}{date}{creador}{latitude}{name}{description}{maxSize}{longitude}",
-				String.class, evento.getImgUrl(), evento.getDate(), evento.getCreador(), evento.getLatitude(),
-				evento.getName(), evento.getDescription(), evento.getMaxSize(), evento.getLongitude());
-		System.out.println(result);
+		client.target("http://localhost:8080//Muffin.v.2/webresources/generic/crearEvento")
+				.queryParam("creador", evento.getCreador()).queryParam("description", evento.getDescription())
+				.queryParam("name", evento.getName()).queryParam("imgUrl", evento.getImgUrl())
+				.queryParam("maxSize", evento.getMaxSize()).queryParam("date", evento.getDate())
+				.queryParam("latitude", evento.getLatitude()).queryParam("longitude", evento.getLongitude())
+				.queryParam("eventType", 1);
+
 		ModelAndView maw = new ModelAndView("home");
 
 		return maw;
@@ -351,7 +357,7 @@ public class MyController {
 	public String questions(Model model, HttpSession session) {
 		// System.out.println(getEventoService().getAllEventos());
 
-		Client client = ClientBuilder.newClient();
+		// Client client = ClientBuilder.newClient();
 
 		String bal = client.target("http://localhost:8080/CalculadoraREST/calculadora/suma").queryParam("oper1", 4)
 				.queryParam("oper2", 5).request("text/plain").get(String.class);
@@ -360,6 +366,7 @@ public class MyController {
 		List<Questions> listQuestions = getQuestionsService().getAllQuestions();
 		System.out.println(listQuestions);
 		session.setAttribute("questions", listQuestions);
+		// client.close();
 		return "questions";
 	}
 
@@ -389,8 +396,8 @@ public class MyController {
 		Evento evto = (Evento) session.getAttribute("selectedEvent");
 		System.out.println("USER " + user.getIdUser());
 		System.out.println("EVENTO " + evto.getName());
-		Client client = ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
-
+		// Client client =
+		// ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
 		UserCaracteristics userCaracteristics = client
 				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/uno")
 				.queryParam("idUser", user.getIdUser()).queryParam("idCategoria", evto.getEventType())
@@ -403,23 +410,25 @@ public class MyController {
 		System.out.println("LISTA . -> " + listUserCar);
 		// Client cliente = ClientBuilder.newClient(new
 		// ClientConfig().register(LoggingFilter.class));
-		WebTarget webTarget = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacion");
+		WebTarget webTarget = client
+				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacion");
 
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		invocationBuilder.put(Entity.entity(userCaracteristics, MediaType.APPLICATION_JSON));
-		
-		WebTarget webTarget2 = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacionMuchos");
+
+		WebTarget webTarget2 = client
+				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacionMuchos");
 
 		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
 		invocationBuilder2.put(Entity.entity(listUserCar, MediaType.APPLICATION_JSON));
-
+		// client.close();
 		return "chat";
 	}
 
 	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
 	public String pruebas(HttpSession session) {
 
-		Client client = ClientBuilder.newClient();
+		// Client client = ClientBuilder.newClient();
 		User user = new User();
 		user.setIdUser(44);
 		user.setUsername("userPruebas");
@@ -436,7 +445,8 @@ public class MyController {
 		// Client client = ClientBuilder.newClient().; ///
 		// Muffin.v.2/webresources/generic
 
-		Client client = ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
+		// Client client =
+		// ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
 
 		ResposeList orden = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/ordenar")
 				.queryParam("id", 2).request(MediaType.APPLICATION_JSON).get(ResposeList.class);
@@ -513,4 +523,11 @@ public class MyController {
 		}
 		return convFile;
 	}
+
+	public void init() throws ServletException {
+		// Initialization code like set up database etc....
+		System.out.println("SERVLET INITIALIZATION");
+
+	}
+
 }
