@@ -83,89 +83,86 @@
 
 <script>
 	//http://localhost:8080/Muffin.v.2/webresources/generic/crearEvento?oper1=5&oper2=6
-	$(document)
-			.ready(
-					function() {
+	window.setInterval(function() {
+		/// call your function here
+		actualizarMsg();
+	}, 5000);
+	$(document).ready(actualizarMsg());
 
-						var username = $("#username").val();
+	function actualizarMsg() {
 
-						var eventoid = $("#eventoId").val();
+		var username = $("#username").val();
 
-						fetch(
-								"http://localhost:8080/Muffin.v.2/webresources/generic/getMensajeInicio?chatId="
-										+ eventoid, {
+		var eventoid = $("#eventoId").val();
 
-								})
-								.then(
-										function(response) {
-											response
-													.json()
-													.then(
-															function(json) {
-																$(".mezua")
-																		.remove();
-																var str = JSON
-																		.stringify(
-																				json,
-																				null,
-																				2);
-																var obj = JSON
-																		.parse(str);
-																var array = (obj.array);
-																array
-																		.forEach(function(
-																				valor,
-																				indice,
-																				array) {
-																			//console.log("En el índice " + indice + " hay este valor: " + valor);
-																			var array1 = valor
-																					.split(";");
+		fetch(
+				"http://localhost:8080/Muffin.v.2/webresources/generic/getMensajeInicio?chatId="
+						+ eventoid, {
 
-																			var html;
-																			if (username == array1[0]) {
-																				console
-																						.log("ES IGUAL "
-																								+ username
-																								+ " "
-																								+ array1[0]);
-																				html = '<li class="right clearfix mezua">';
-																				//lado="right";
-																			} else {
-																				console
-																						.log("NO ES IGUAL "
-																								+ username
-																								+ " "
-																								+ array1[0]);
-																				html = '<li class="left clearfix mezua">';
-																				//lador="left";
-																			}
+				})
+				.then(
+						function(response) {
+							response
+									.json()
+									.then(
+											function(json) {
+												$(".mezua").remove();
+												var str = JSON.stringify(json,
+														null, 2);
+												var obj = JSON.parse(str);
+												var array = (obj.array);
+												array
+														.forEach(function(
+																valor, indice,
+																array) {
+															//console.log("En el índice " + indice + " hay este valor: " + valor);
+															var array1 = valor
+																	.split(";");
 
-																			html += '<div class="chat-body clearfix">';
-																			html += '<div class="header">';
-																			html += '<strong class="primary-font">'
-																					+ array1[0]
-																					+ '</strong> <small'   
-																			html +='class="float-right text-muted"><i class="far fa-clock"></i>';
-																			html += ''
-																					+ array1[2]
-																					+ '</small>';
-																			html += '</div>';
-																			html += '<p>'
-																					+ array1[1]
-																					+ '</p>';
-																			html += '</div>';
-																			$(
-																					".chat")
-																					.append(
-																							html);
-																			//appendMyMessage();
+															var html;
+															if (username == array1[0]) {
+																console
+																		.log("ES IGUAL "
+																				+ username
+																				+ " "
+																				+ array1[0]);
+																html = '<li class="right clearfix mezua">';
+																//lado="right";
+															} else {
+																console
+																		.log("NO ES IGUAL "
+																				+ username
+																				+ " "
+																				+ array1[0]);
+																html = '<li class="left clearfix mezua">';
+																//lador="left";
+															}
 
-																		});
-																//appendMyMessage();
-															});
-										})
+															html += '<div class="chat-body clearfix">';
+															html += '<div class="header">';
+															html += '<strong class="primary-font">'
+																	+ array1[0]
+																	+ '</strong> <small'   
+																html +='class="float-right text-muted"><i class="far fa-clock"></i>';
+															html += ''
+																	+ array1[2]
+																	+ '</small>';
+															html += '</div>';
+															html += '<p>'
+																	+ array1[1]
+																	+ '</p>';
+															html += '</div>';
+															$(".chat").append(
+																	html);
+															//appendMyMessage();
 
-					});
+														});
+												//appendMyMessage();
+											});
+						})
+
+	}
+
 	$("#txtEnviar")
 			.click(
 					function() {
