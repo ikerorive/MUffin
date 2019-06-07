@@ -30,8 +30,8 @@
 
 	<div class="input-group mb-3">
 
-		<input type="text" class="form-control lgtd" id="lng" placeholder="Longitude"
-			aria-label="Example text with button addon"
+		<input type="text" class="form-control lgtd" id="lng"
+			placeholder="Longitude" aria-label="Example text with button addon"
 			aria-describedby="button-addon1" name="longitude"> <input
 			type="text" class="form-control" id="lat" placeholder="Latitude"
 			aria-label="Example text with button addon"
@@ -46,14 +46,24 @@
 		</div>
 	</div>
 
+	<select name="eventType" class="browser-default custom-select mb-4">
+		<option value="" disabled selected>Select Category</option>
+		<option value="1">Deporte</option>
+		<option value="2">Tecnologia</option>
+		<option value="3">Moda</option>
+		<option value="4">Cultura</option>
+		<option value="5">Ocio</option>
+		<option value="6">Gastronomia</option>
+	</select>
+
 	<!-- Sign up button -->
 	<button class="btn btn-info my-4 btn-block purple-gradient"
 		type="submit" value="Confirm">Sign up</button>
 
 </form:form>
 
-<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog"
-	aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="basicExampleModal" tabindex="-1"
+	role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -68,10 +78,14 @@
 				<div id="mapid" style="width: 450px; height: 400px;"></div>
 			</div>
 			<div class="modal-footer">
-			<p class="lgtd"></p> <p class="lttd"></p></div>
+				<p class="lgtd"></p>
+				<p class="lttd"></p>
+			</div>
 		</div>
 	</div>
 </div>
+
+
 
 <script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>
 <script type="text/javascript">

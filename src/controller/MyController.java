@@ -242,13 +242,19 @@ public class MyController {
 		 * latitude, @QueryParam("longitude") String longitude, @QueryParam("eventType")
 		 * int eventType) {
 		 */
-		client.target("http://localhost:8080//Muffin.v.2/webresources/generic/crearEvento")
-				.queryParam("creador", evento.getCreador()).queryParam("description", evento.getDescription())
-				.queryParam("name", evento.getName()).queryParam("imgUrl", evento.getImgUrl())
-				.queryParam("maxSize", evento.getMaxSize()).queryParam("date", evento.getDate())
-				.queryParam("latitude", evento.getLatitude()).queryParam("longitude", evento.getLongitude())
-				.queryParam("eventType", 1);
-
+		/*
+		 * client.target(
+		 * "http://localhost:8080//Muffin.v.2/webresources/generic/crearEvento")
+		 * .queryParam("creador", evento.getCreador()).queryParam("description",
+		 * evento.getDescription()) .queryParam("name",
+		 * evento.getName()).queryParam("imgUrl", evento.getImgUrl())
+		 * .queryParam("maxSize", evento.getMaxSize()).queryParam("date",
+		 * evento.getDate()) .queryParam("latitude",
+		 * evento.getLatitude()).queryParam("longitude", evento.getLongitude())
+		 * .queryParam("eventType", 1);
+		 */
+		
+		System.out.println("Selected Category "+evento.getEventType());
 		ModelAndView maw = new ModelAndView("home");
 
 		return maw;
