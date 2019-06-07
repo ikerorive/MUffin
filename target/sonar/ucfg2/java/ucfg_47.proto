@@ -1,0 +1,26 @@
+
++json.Categoria#toString()Ljava/lang/String;>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java$ $("1*—
+1>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java%	 %(ª§
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java%	 %(
+%0java.lang.String",json.Categoria#getNombre()Ljava/lang/String;*
+json.Categoria2getNombre()®«
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java% %(/
+%1java.util.List".json.Categoria#getRespuestas()Ljava/util/List;*
+json.Categoria2getRespuestas()—
+”
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java%	 %(/
+%2java.lang.String"__concat*
+
+%0java.lang.String*
+
+%1java.util.List"Z
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Categoria.java% %(0
+
+%2java.lang.StringB
+json.Categoria

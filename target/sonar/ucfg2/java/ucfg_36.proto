@@ -1,0 +1,16 @@
+
+fdao.impl.QuestionsDAOImpl#getHibernateTemplate()Lorg/springframework/orm/hibernate4/HibernateTemplate;I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java) )(."1*£
+1I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java*	 *(Æ
+Ã
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java*	 *(:
+%04org.springframework.orm.hibernate4.HibernateTemplate"__id*4*2
+dao.impl.QuestionsDAOImpl"
+hibernateTemplate"‰
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java* *(<
+:
+%04org.springframework.orm.hibernate4.HibernateTemplateB
+dao.impl.QuestionsDAOImpl

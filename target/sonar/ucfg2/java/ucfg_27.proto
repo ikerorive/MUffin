@@ -1,0 +1,37 @@
+
+4controller.PassHash#generateSalt()Ljava/lang/String;C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java ("1*Ï
+1C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (*†ƒ
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (( 
+%0java.security.SecureRandom"java.security.SecureRandom˜
+•
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (*
+%1"$java.security.SecureRandom#<init>()V*"
+ 
+%0java.security.SecureRandom˜
+•
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (+$
+randomjava.security.SecureRandom"__id*"
+ 
+%0java.security.SecureRandom¾»
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (
+
+%2void")java.security.SecureRandom#nextBytes([B)V*&
+$
+randomjava.security.SecureRandom*
+""2nextBytes([B)£ 
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java	 (
+%3java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*
+""2
+toString()"_
+C
+9C:\Users\ikorm\git\MUffinGIT\src\controller\PassHash.java (
+
+%3java.lang.StringB
+controller.PassHash

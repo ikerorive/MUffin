@@ -1,0 +1,120 @@
+
++json.Respuesta#toString()Ljava/lang/String;>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java> >("1*„
+1>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(
+%0java.lang.Integer"0json.Respuesta#getPregunta1()Ljava/lang/Integer;*
+json.Respuesta2getPregunta1()≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?('
+%1java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%0java.lang.Integer2
+toString()á
+Ñ
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(-
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+, ≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?. ?(A
+%3java.lang.Integer"0json.Respuesta#getPregunta2()Ljava/lang/Integer;*
+json.Respuesta2getPregunta2()≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?. ?(L
+%4java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%3java.lang.Integer2
+toString()ô
+ñ
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(L
+%5java.lang.String"__concat*
+
+%2java.lang.String*
+
+%4java.lang.Stringá
+Ñ
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(R
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+, ≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?S ?(f
+%7java.lang.Integer"0json.Respuesta#getPregunta3()Ljava/lang/Integer;*
+json.Respuesta2getPregunta3()≤Ø
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?S ?(q
+%8java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%7java.lang.Integer2
+toString()ô
+ñ
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(q
+%9java.lang.String"__concat*
+
+%6java.lang.String*
+
+%8java.lang.Stringà
+Ö
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(w
+%10java.lang.String"__concat*
+
+%9java.lang.String*
+, ¥±
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?x ?(ã
+%11java.lang.Integer"0json.Respuesta#getPregunta4()Ljava/lang/Integer;*
+json.Respuesta2getPregunta4()µ≤
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?x ?(ñ
+%12java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%11java.lang.Integer2
+toString()ù
+ö
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(ñ
+%13java.lang.String"__concat*
+
+%10java.lang.String*
+
+%12java.lang.Stringä
+á
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(ú
+%14java.lang.String"__concat*
+
+%13java.lang.String*
+, µ≤
+@
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?ù ?(∞
+%15java.lang.Integer"0json.Respuesta#getPregunta5()Ljava/lang/Integer;*
+json.Respuesta2getPregunta5()∂≥
+@
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?ù ?(ª
+%16java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%15java.lang.Integer2
+toString()ù
+ö
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java?	 ?(ª
+%17java.lang.String"__concat*
+
+%14java.lang.String*
+
+%16java.lang.String"\
+?
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java? ?(º
+
+%17java.lang.StringB
+json.Respuesta

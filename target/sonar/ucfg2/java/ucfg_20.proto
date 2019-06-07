@@ -1,0 +1,381 @@
+
+[controller.MyController#suscribeToEvent(Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÏ Ï("paramAnnotations*Â
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÏ Ï(3Ê
+Ç
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÎ Î(G
+%47"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSession
+
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÏ+ Ï(2)
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%47*
+1*f
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÐ Ð(v
+t
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÐ Ð(
+%0java.io.PrintStream"__id*
+""àÝ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÐ Ð(,
+
+%1void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*
+SE SUSCRIBE A EVENTO2println(Ljava/lang/String;)’
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ Ñ(1
+%2java.lang.Object"Qjavax.servlet.http.HttpSession#getAttribute(Ljava/lang/String;)Ljava/lang/Object;*+
+)
+sessionjavax.servlet.http.HttpSession*
+user2 getAttribute(Ljava/lang/String;)
+
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ Ñ(2
+user
+model.User"__id*
+
+%2java.lang.Object›˜
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÒ Ò(>
+%3java.lang.Object"Qjavax.servlet.http.HttpSession#getAttribute(Ljava/lang/String;)Ljava/lang/Object;*+
+)
+sessionjavax.servlet.http.HttpSession*
+selectedEvent2 getAttribute(Ljava/lang/String;)„
+
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÒ Ò(?
+evtomodel.Evento"__id*
+
+%3java.lang.Objectv
+t
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÓ Ó(
+%4java.io.PrintStream"__id*
+""•’
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÓ Ó(/	
+%5int"model.User#getIdUser()I*
+
+user
+model.User2getIdUser()ˆ
+…
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÓ Ó(/
+%6java.lang.String"__concat*	
+USER *
+	
+%5intàÝ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÓ Ó(0
+
+%7void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%4java.io.PrintStream*
+
+%6java.lang.String2println(Ljava/lang/String;)v
+t
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ Ô(
+%8java.io.PrintStream"__id*
+""³°
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ! Ô(/
+%9java.lang.String"(model.Evento#getName()Ljava/lang/String;*
+
+evtomodel.Evento2	getName()˜
+•
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ Ô(/
+%10java.lang.String"__concat*	
+EVENTO *
+
+%9java.lang.Stringâß
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ Ô(0
+%11void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%8java.io.PrintStream*
+
+%10java.lang.String2println(Ljava/lang/String;)´
+±
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* ×(05
+%12.org.jboss.resteasy.client.jaxrs.ResteasyClient"__id*'*%
+controller.MyController"
+client¤¡
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* Ø(R8
+%131org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"|org.jboss.resteasy.client.jaxrs.ResteasyClient#target(Ljava/lang/String;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*7
+5
+%12.org.jboss.resteasy.client.jaxrs.ResteasyClient*GE
+Chttp://localhost:8080/cambiarEventosServer/webresources/generic/uno2target(Ljava/lang/String;)–“
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÙ Ù(*
+
+%14int"model.User#getIdUser()I*
+
+user
+model.User2getIdUser()ª§
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* Ù(+8
+%151org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*:
+8
+%131org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+
+idUser*
+
+
+%14int21queryParam(Ljava/lang/String;[Ljava/lang/Object;)¾»
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÙF Ù(Y
+%16java.lang.String"-model.Evento#getEventType()Ljava/lang/String;*
+
+evtomodel.Evento2getEventType()¼¹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* Ù(Z8
+%171org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*:
+8
+%151org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+idCategoria*
+
+%16java.lang.String21queryParam(Ljava/lang/String;[Ljava/lang/Object;)t
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÚ Ú('
+%18java.lang.String"__id*
+""ÓÐ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* Ú((,
+%19%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*:
+8
+%171org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+
+%18java.lang.String2request([Ljava/lang/String;)‡„
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java×* Ú(F
+%20json.UserCaracteristics"Gjavax.ws.rs.client.SyncInvoker#get(Ljava/lang/Class;)Ljava/lang/Object;*.
+,
+%19%javax.ws.rs.client.Invocation$Builder*
+""2get(Ljava/lang/Class;)¥
+¢
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java× Ú(G-
+userCaracteristicsjson.UserCaracteristics"__id* 
+
+%20json.UserCaracteristics´
+±
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. Ü(45
+%21.org.jboss.resteasy.client.jaxrs.ResteasyClient"__id*'*%
+controller.MyController"
+client§¤
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. Ý(U8
+%221org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"|org.jboss.resteasy.client.jaxrs.ResteasyClient#target(Ljava/lang/String;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*7
+5
+%21.org.jboss.resteasy.client.jaxrs.ResteasyClient*JH
+Fhttp://localhost:8080/cambiarEventosServer/webresources/generic/muchos2target(Ljava/lang/String;)–“
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÞ Þ(*
+
+%23int"model.User#getIdUser()I*
+
+user
+model.User2getIdUser()ª§
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. Þ(+8
+%241org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*:
+8
+%221org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+
+idUser*
+
+
+%23int21queryParam(Ljava/lang/String;[Ljava/lang/Object;)¾»
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÞF Þ(Y
+%25java.lang.String"-model.Evento#getEventType()Ljava/lang/String;*
+
+evtomodel.Evento2getEventType()¼¹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. Þ(Z8
+%261org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*:
+8
+%241org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+idCategoria*
+
+%25java.lang.String21queryParam(Ljava/lang/String;[Ljava/lang/Object;)t
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß ß('
+%27java.lang.String"__id*
+""ÓÐ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. ß((,
+%28%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*:
+8
+%261org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+
+%27java.lang.String2request([Ljava/lang/String;)ƒ€
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ. ß(=
+%29java.util.ArrayList"Gjavax.ws.rs.client.SyncInvoker#get(Ljava/lang/Class;)Ljava/lang/Object;*.
+,
+%28%javax.ws.rs.client.Invocation$Builder*
+""2get(Ljava/lang/Class;)–
+“
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÜ ß(>"
+listUserCarjava.util.ArrayList"__id*
+
+%29java.util.ArrayListw
+u
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà à(
+%30java.io.PrintStream"__id*
+""¨
+¥
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà à(0
+%31java.lang.String"__concat*
+LISTA . -> *$
+"
+listUserCarjava.util.ArrayListãà
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà à(1
+%32void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%30java.io.PrintStream*
+
+%31java.lang.String2println(Ljava/lang/String;)´
+±
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaã ã(5
+%33.org.jboss.resteasy.client.jaxrs.ResteasyClient"__id*'*%
+controller.MyController"
+client«¨
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaã ä(Y8
+%341org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"|org.jboss.resteasy.client.jaxrs.ResteasyClient#target(Ljava/lang/String;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*7
+5
+%33.org.jboss.resteasy.client.jaxrs.ResteasyClient*NL
+Jhttp://localhost:8080/cambiarEventosServer/webresources/generic/aplicacion2target(Ljava/lang/String;)»
+¸
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaã ä(Z)
+	webTargetjavax.ws.rs.client.WebTarget"__id*:
+8
+%341org.jboss.resteasy.client.jaxrs.ResteasyWebTargett
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaæ; æ(U
+%35java.lang.String"__id*
+""ÄÁ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaæ) æ(V,
+%36%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*+
+)
+	webTargetjavax.ws.rs.client.WebTarget*
+
+%35java.lang.String2request([Ljava/lang/String;)À
+½
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaæ æ(W:
+invocationBuilder%javax.ws.rs.client.Invocation$Builder"__id*.
+,
+%36%javax.ws.rs.client.Invocation$Buildert
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç: ç(T
+%37java.lang.String"__id*
+""¾
+»
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç ç(U 
+%38javax.ws.rs.client.Entity"ajavax.ws.rs.client.Entity#entity(Ljava/lang/Object;Ljava/lang/String;)Ljavax/ws/rs/client/Entity;*"
+javax.ws.rs.client.Entity*/
+-
+userCaracteristicsjson.UserCaracteristics*
+
+%37java.lang.StringÐÍ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç ç(V 
+%39javax.ws.rs.core.Response"Zjavax.ws.rs.client.SyncInvoker#put(Ljavax/ws/rs/client/Entity;)Ljavax/ws/rs/core/Response;*<
+:
+invocationBuilder%javax.ws.rs.client.Invocation$Builder*"
+ 
+%38javax.ws.rs.client.Entity2 put(Ljavax/ws/rs/client/Entity;)´
+±
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaé é(5
+%40.org.jboss.resteasy.client.jaxrs.ResteasyClient"__id*'*%
+controller.MyController"
+client±®
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaé ê(_8
+%411org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"|org.jboss.resteasy.client.jaxrs.ResteasyClient#target(Ljava/lang/String;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*7
+5
+%40.org.jboss.resteasy.client.jaxrs.ResteasyClient*TR
+Phttp://localhost:8080/cambiarEventosServer/webresources/generic/aplicacionMuchos2target(Ljava/lang/String;)¼
+¹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaé ê(`*
+
+webTarget2javax.ws.rs.client.WebTarget"__id*:
+8
+%411org.jboss.resteasy.client.jaxrs.ResteasyWebTargett
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì= ì(W
+%42java.lang.String"__id*
+""ÅÂ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì* ì(X,
+%43%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*,
+*
+
+webTarget2javax.ws.rs.client.WebTarget*
+
+%42java.lang.String2request([Ljava/lang/String;)Á
+¾
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì ì(Y;
+invocationBuilder2%javax.ws.rs.client.Invocation$Builder"__id*.
+,
+%43%javax.ws.rs.client.Invocation$Buildert
+r
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí4 í(N
+%44java.lang.String"__id*
+""³
+°
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí í(O 
+%45javax.ws.rs.client.Entity"ajavax.ws.rs.client.Entity#entity(Ljava/lang/Object;Ljava/lang/String;)Ljavax/ws/rs/client/Entity;*"
+javax.ws.rs.client.Entity*$
+"
+listUserCarjava.util.ArrayList*
+
+%44java.lang.StringÑÎ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí í(P 
+%46javax.ws.rs.core.Response"Zjavax.ws.rs.client.SyncInvoker#put(Ljavax/ws/rs/client/Entity;)Ljavax/ws/rs/core/Response;*=
+;
+invocationBuilder2%javax.ws.rs.client.Invocation$Builder*"
+ 
+%45javax.ws.rs.client.Entity2 put(Ljavax/ws/rs/client/Entity;)"U
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï(
+chat:)
+sessionjavax.servlet.http.HttpSessionB
+controller.MyController

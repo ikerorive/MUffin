@@ -1,0 +1,127 @@
+
+Scontroller.MyController#pruebas(Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java÷ ÷("paramAnnotations*Â
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java÷ ÷(+Ê
+Ç
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaö ö(?
+%13"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSession
+
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java÷# ÷(*)
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%13*
+1*
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(ki
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(
+%0
+model.User"
+model.User}
+{
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(
+%1"model.User#<init>()V*
+
+%0
+model.User{
+y
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(
+user
+model.User"__id*
+
+%0
+model.User›
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(
+
+%2void"model.User#setIdUser(I)V*
+
+user
+model.User*2,2setIdUser(I)ÏÌ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaü ü(!
+
+%3void"+model.User#setUsername(Ljava/lang/String;)V*
+
+user
+model.User*
+userPruebas2setUsername(Ljava/lang/String;)³
+°
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ı(4
+%4.org.jboss.resteasy.client.jaxrs.ResteasyClient"__id*'*%
+controller.MyController"
+client™–
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ı(X7
+%51org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"|org.jboss.resteasy.client.jaxrs.ResteasyClient#target(Ljava/lang/String;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*6
+4
+%4.org.jboss.resteasy.client.jaxrs.ResteasyClient*><
+:http://localhost:8080/MuffinRMQ/webresources/generic/crear2target(Ljava/lang/String;)œ™
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ı(l7
+%61org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*9
+7
+%51org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+id*221queryParam(Ljava/lang/String;[Ljava/lang/Object;)¶³
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ş(37
+%71org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*9
+7
+%61org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+descripcion*
+asdasdasddsasdads21queryParam(Ljava/lang/String;[Ljava/lang/Object;)®«
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ş(L7
+%81org.jboss.resteasy.client.jaxrs.ResteasyWebTarget"–org.jboss.resteasy.client.jaxrs.ResteasyWebTarget#queryParam(Ljava/lang/String;[Ljava/lang/Object;)Lorg/jboss/resteasy/client/jaxrs/ResteasyWebTarget;*9
+7
+%71org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+user*
+
+user
+model.User21queryParam(Ljava/lang/String;[Ljava/lang/Object;)ÆÃ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ş(b+
+%9%javax.ws.rs.client.Invocation$Builder"`javax.ws.rs.client.WebTarget#request([Ljava/lang/String;)Ljavax/ws/rs/client/Invocation$Builder;*9
+7
+%81org.jboss.resteasy.client.jaxrs.ResteasyWebTarget*
+
+text/plain2request([Ljava/lang/String;)ÿü
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ÿ(
+%10java.lang.String"Gjavax.ws.rs.client.SyncInvoker#get(Ljava/lang/Class;)Ljava/lang/Object;*-
++
+%9%javax.ws.rs.client.Invocation$Builder*
+""2get(Ljava/lang/Class;)†
+ƒ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaı ÿ(
+sjava.lang.String"__id*
+
+%10java.lang.Stringw
+u
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java€ €(
+%11java.io.PrintStream"__id*
+""áŞ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java€ €(
+%12void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%11java.io.PrintStream*
+
+sjava.lang.String2println(Ljava/lang/String;)"X
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java (	
+pruebas:)
+sessionjavax.servlet.http.HttpSessionB
+controller.MyController

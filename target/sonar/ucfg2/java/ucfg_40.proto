@@ -1,0 +1,55 @@
+
+,dao.impl.UserDAOImpl#saveUser(Lmodel/User;)ZD
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java6 6("paramAnnotations*™
+2D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java9
+ 9("N
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java9 9(
+""*Ë
+3D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java7 7(&¼
+¹
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java7 7(&:
+%04org.springframework.orm.hibernate4.HibernateTemplate"__id*/*-
+dao.impl.UserDAOImpl"
+hibernateTemplate¸µ
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java7 7(1
+%1java.io.Serializable"corg.springframework.orm.hibernate4.HibernateTemplate#save(Ljava/lang/Object;)Ljava/io/Serializable;*<
+:
+%04org.springframework.orm.hibernate4.HibernateTemplate*
+
+user
+model.User2save(Ljava/lang/Object;)*
+2
+1*Ý
+paramAnnotationsD
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java6 6(#‰
+†
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java5 5(
+
+%2"
+__annotate*
+java.lang.Override*
+
+user
+model.Userr
+p
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java6 6("
+user
+model.User"__annotation*
+
+%2*
+3*™
+1D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java:	 :("N
+D
+:C:\Users\ikorm\git\MUffinGIT\src\dao\impl\UserDAOImpl.java: :(
+"":
+user
+model.UserB
+dao.impl.UserDAOImpl

@@ -1,0 +1,51 @@
+
+2dao.impl.EventoDAOImpl#saveEvento(Lmodel/Evento;)ZF
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java/ /("paramAnnotations*
+2F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java2
+ 2("P
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java2 2(
+""*×
+3F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java0 0(&À
+½
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java0 0(&:
+%04org.springframework.orm.hibernate4.HibernateTemplate"__id*1*/
+dao.impl.EventoDAOImpl"
+hibernateTemplate¾»
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java0 0(3
+%1java.io.Serializable"corg.springframework.orm.hibernate4.HibernateTemplate#save(Ljava/lang/Object;)Ljava/io/Serializable;*<
+:
+%04org.springframework.orm.hibernate4.HibernateTemplate*
+
+eventomodel.Evento2save(Ljava/lang/Object;)*
+2
+1*ë
+paramAnnotationsF
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java/ /()
+Œ
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java. .(
+
+%2"
+__annotate*
+java.lang.Override*
+
+eventomodel.Eventox
+v
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java/" /((
+eventomodel.Evento"__annotation*
+
+%2*
+3*
+1F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java3	 3("P
+F
+<C:\Users\ikorm\git\MUffinGIT\src\dao\impl\EventoDAOImpl.java3 3(
+"":
+eventomodel.EventoB
+dao.impl.EventoDAOImpl

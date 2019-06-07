@@ -1,0 +1,44 @@
+
+Scontroller.MyController#loginPage(Lorg/springframework/ui/Model;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú("paramAnnotations*∏
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(%≈
+¬
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ(>
+%3"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*'
+%
+modelorg.springframework.ui.Modelã
+à
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú($%
+modelorg.springframework.ui.Model"__annotation*
+
+%3*
+1*Ø
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(}
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù+ ù(9
+%0model.UserCredential"model.UserCredentialí
+è
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù' ù(;
+%1"model.UserCredential#<init>()V*
+
+%0model.UserCredentialÌ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(<"
+%2org.springframework.ui.Model"morg.springframework.ui.Model#addAttribute(Ljava/lang/String;Ljava/lang/Object;)Lorg/springframework/ui/Model;*'
+%
+modelorg.springframework.ui.Model*
+userCredential*
+
+%0model.UserCredential22addAttribute(Ljava/lang/String;Ljava/lang/Object;)"V
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(	
+login:%
+modelorg.springframework.ui.ModelB
+controller.MyController

@@ -1,0 +1,87 @@
+
+tcontroller.MyController#misEventos(Ljavax/servlet/http/HttpSession;Lorg/springframework/ui/Model;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¥ ¥("paramAnnotations*ñ
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¥ ¥(;…
+∆
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≥ ≥(B
+%5"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSessionè
+å
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¥& ¥(-)
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%5≈
+¬
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≥ ≥(B
+%6"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*'
+%
+modelorg.springframework.ui.Modelã
+à
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¥5 ¥(:%
+modelorg.springframework.ui.Model"__annotation*
+
+%6*
+1*ˆ
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(íè
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(1
+%0java.lang.Object"Qjavax.servlet.http.HttpSession#getAttribute(Ljava/lang/String;)Ljava/lang/Object;*+
+)
+sessionjavax.servlet.http.HttpSession*
+user2 getAttribute(Ljava/lang/String;)Å
+
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(2
+user
+model.User"__id*
+
+%0java.lang.Objectﬂ‹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(/
+%1service.EventoService"Acontroller.MyController#getEventoService()Lservice/EventoService;*
+controller.MyController2getEventoService()ïí
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂D ∂(T	
+%2int"model.User#getIdUser()I*
+
+user
+model.User2getIdUser()Ê„
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(U
+%3java.util.List"<service.EventoService#getEventosByCreator(I)Ljava/util/List;*
+
+%1service.EventoService*
+	
+%2int2getEventosByCreator(I)ã
+à
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(V
+listEventosjava.util.List"__id*
+
+%3java.util.ListΩ∫
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∑ ∑(.
+
+%4void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+)
+sessionjavax.servlet.http.HttpSession*	
+eventos*
+
+listEventosjava.util.List22setAttribute(Ljava/lang/String;Ljava/lang/Object;)"\
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaπ π(
+eventoLista:)
+sessionjavax.servlet.http.HttpSession:%
+modelorg.springframework.ui.ModelB
+controller.MyController

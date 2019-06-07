@@ -81,6 +81,7 @@ $(document).ready(function(){
 
 function f() {
 	getLocation();
+	
 }
 setInterval(f, 60000)
 

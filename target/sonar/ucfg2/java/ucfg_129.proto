@@ -1,0 +1,19 @@
+
+Cservice.impl.QuestionsServiceImpl#getAllQuestions()Ljava/util/List;Q
+GC:\Users\ikorm\git\MUffinGIT\src\service\impl\QuestionsServiceImpl.java1 1('"1*…
+1Q
+GC:\Users\ikorm\git\MUffinGIT\src\service\impl\QuestionsServiceImpl.java3	 3(ïì
+Q
+GC:\Users\ikorm\git\MUffinGIT\src\service\impl\QuestionsServiceImpl.java3	 3(
+%0dao.QuestionsDAO"Eservice.impl.QuestionsServiceImpl#getQuestionsDAO()Ldao/QuestionsDAO;*%#
+!service.impl.QuestionsServiceImpl2getQuestionsDAO()ÍÊ
+Q
+GC:\Users\ikorm\git\MUffinGIT\src\service\impl\QuestionsServiceImpl.java3	 3(,
+%1java.util.List"2dao.QuestionsDAO#getAllQuestions()Ljava/util/List;*
+
+%0dao.QuestionsDAO2getAllQuestions()"k
+Q
+GC:\Users\ikorm\git\MUffinGIT\src\service\impl\QuestionsServiceImpl.java3 3(-
+
+%1java.util.ListB%#
+!service.impl.QuestionsServiceImpl

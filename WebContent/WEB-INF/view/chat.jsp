@@ -96,7 +96,7 @@
 		var eventoid = $("#eventoId").val();
 
 		fetch(
-				"http://localhost:8080/Muffin.v.2/webresources/generic/getMensajeInicio?chatId="
+				"http://localhost:8080/Muffin.v.2/webresources/chat/getMensajeInicio?chatId="
 						+ eventoid, {
 
 				})
@@ -175,7 +175,7 @@
 						var eventoid = $("#eventoId").val();
 						console.log(msg + username + userid + eventoid);
 						fetch(
-								"http://localhost:8080/Muffin.v.2/webresources/generic/enviarMensaje?userId="
+								"http://localhost:8080/Muffin.v.2/webresources/chat/enviarMensaje?userId="
 										+ userid + "&username=" + username
 										+ "&mensaje=" + msg + "&chatId="
 										+ eventoid, {

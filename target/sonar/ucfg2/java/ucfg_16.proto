@@ -1,0 +1,79 @@
+
+scontroller.MyController#questions(Lorg/springframework/ui/Model;Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ("paramAnnotations*ñ
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ(:≈
+¬
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaö ö(B
+%5"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*'
+%
+modelorg.springframework.ui.Modelã
+à
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ($%
+modelorg.springframework.ui.Model"__annotation*
+
+%5…
+∆
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaö ö(B
+%6"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSessionè
+å
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ2 õ(9)
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%6*
+1*®
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶" ¶(5ÎË
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶" ¶(7
+%0service.QuestionsService"Gcontroller.MyController#getQuestionsService()Lservice/QuestionsService;*
+controller.MyController2getQuestionsService()’“
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶" ¶(I
+%1java.util.List":service.QuestionsService#getAllQuestions()Ljava/util/List;* 
+
+%0service.QuestionsService2getAllQuestions()ç
+ä
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶ ¶(J
+listQuestionsjava.util.List"__id*
+
+%1java.util.Listv
+t
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß ß(
+%2java.io.PrintStream"__id*
+""ÈÊ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß ß(#
+
+%3void"0java.io.PrintStream#println(Ljava/lang/Object;)V*
+
+%2java.io.PrintStream*!
+
+listQuestionsjava.util.List2println(Ljava/lang/Object;)¡æ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java® ®(2
+
+%4void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+)
+sessionjavax.servlet.http.HttpSession*
+	questions*!
+
+listQuestionsjava.util.List22setAttribute(Ljava/lang/String;Ljava/lang/Object;)"Z
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java™ ™(
+	questions:%
+modelorg.springframework.ui.Model:)
+sessionjavax.servlet.http.HttpSessionB
+controller.MyController

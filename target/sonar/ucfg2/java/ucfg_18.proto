@@ -1,0 +1,27 @@
+
+Xcontroller.MyController#uploadAvatar(Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaº º("paramAnnotations*¿
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaº º(0…
+∆
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaª ª(D
+%0"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSessionè
+å
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaº( º(/)
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%0*
+1*≠
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaæ	 æ("]
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaæ æ(
+uploadAvatar:)
+sessionjavax.servlet.http.HttpSessionB
+controller.MyController

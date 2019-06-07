@@ -1,0 +1,62 @@
+
+;dao.impl.QuestionsDAOImpl#getAllQuestions()Ljava/util/List;I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java2 2('"4*ø
+2I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java7
+ 7("o
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java7 7("
+ 
+findByCriteriajava.util.List*ˆ
+3I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java6  6(.ùö
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java6  6(5	
+%3int"java.util.List#size()I*"
+ 
+findByCriteriajava.util.List2size()*
+2
+1*¿
+
+4I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java3& 3(6§
+°
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java3& 3(P.
+%0(org.hibernate.criterion.DetachedCriteria"norg.hibernate.criterion.DetachedCriteria#forClass(Ljava/lang/Class;)Lorg/hibernate/criterion/DetachedCriteria;*,"*
+(org.hibernate.criterion.DetachedCriteria*
+""ƒ
+¡
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java3 3(Q<
+detachedCriteria(org.hibernate.criterion.DetachedCriteria"__id*0
+.
+%0(org.hibernate.criterion.DetachedCriteria∆
+√
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java55 5(F:
+%14org.springframework.orm.hibernate4.HibernateTemplate"__id*4*2
+dao.impl.QuestionsDAOImpl"
+hibernateTemplateüú
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java55 5(g
+%2java.util.List"org.springframework.orm.hibernate4.HibernateTemplate#findByCriteria(Lorg/hibernate/criterion/DetachedCriteria;)Ljava/util/List;*<
+:
+%14org.springframework.orm.hibernate4.HibernateTemplate*>
+<
+detachedCriteria(org.hibernate.criterion.DetachedCriteria2:findByCriteria(Lorg/hibernate/criterion/DetachedCriteria;)é
+ã
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java5 5(h 
+findByCriteriajava.util.List"__id*
+
+%2java.util.List*
+3
+1*£
+1I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java9
+ 9("S
+I
+?C:\Users\ikorm\git\MUffinGIT\src\dao\impl\QuestionsDAOImpl.java9 9(
+""B
+dao.impl.QuestionsDAOImpl

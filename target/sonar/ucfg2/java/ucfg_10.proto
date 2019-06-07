@@ -1,0 +1,295 @@
+
+±controller.MyController#registerSuccess(Lmodel/User;Lorg/springframework/validation/BindingResult;Ljavax/servlet/http/HttpSession;)Lorg/springframework/web/servlet/ModelAndView;I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄ ⁄($"paramAnnotations*≠
+2I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÌ Ì( ±Æ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÌ Ì(3
+%30,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndView‡
+›
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÌ	 Ì(!
+%31"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*5
+3
+%30,org.springframework.web.servlet.ModelAndView*
+home¿
+Ω
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÌ Ì(!3
+maw,org.springframework.web.servlet.ModelAndView"__id*5
+3
+%30,org.springframework.web.servlet.ModelAndView*
+1*∏
+3I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaË# Ë(6ÏÈ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaË# Ë(8
+%23service.QuestionsService"Gcontroller.MyController#getQuestionsService()Lservice/QuestionsService;*
+controller.MyController2getQuestionsService()◊‘
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaË# Ë(J
+%24java.util.List":service.QuestionsService#getAllQuestions()Ljava/util/List;*!
+
+%23service.QuestionsService2getAllQuestions()é
+ã
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaË Ë(K
+listQuestionsjava.util.List"__id*
+
+%24java.util.Listw
+u
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÈ È(
+%25java.io.PrintStream"__id*
+""ÎË
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÈ È($
+%26void"0java.io.PrintStream#println(Ljava/lang/Object;)V*
+
+%25java.io.PrintStream*!
+
+listQuestionsjava.util.List2println(Ljava/lang/Object;)¬ø
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÍ Í(3
+%27void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+)
+sessionjavax.servlet.http.HttpSession*
+	questions*!
+
+listQuestionsjava.util.List22setAttribute(Ljava/lang/String;Ljava/lang/Object;)±Æ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÎ Î(3
+%28,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndViewÂ
+‚
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÎ	 Î(&
+%29"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*5
+3
+%28,org.springframework.web.servlet.ModelAndView*
+	questions¿
+Ω
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÎ Î(&3
+maw,org.springframework.web.servlet.ModelAndView"__id*5
+3
+%28,org.springframework.web.servlet.ModelAndView*
+1*ù
+4I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaﬂ ﬂ(}{
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaﬂ ﬂ(
+%8controller.PassHash"controller.PassHashê
+ç
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaﬂ ﬂ(
+%9"controller.PassHash#<init>()V*
+
+%8controller.PassHashå
+â
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaﬂ ﬂ(
+phcontroller.PassHash"__id*
+
+%8controller.PassHash «
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‡ ‡( 
+%10java.lang.String"4controller.PassHash#generateSalt()Ljava/lang/String;*
+
+phcontroller.PassHash2generateSalt()“œ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‡ ‡(!
+%11void"'model.User#setSalt(Ljava/lang/String;)V*
+
+user
+model.User*
+
+%10java.lang.String2setSalt(Ljava/lang/String;)∏µ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java·$ ·(6
+%12java.lang.String"*model.User#getPassword()Ljava/lang/String;*
+
+user
+model.User2getPassword()∞≠
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java·8 ·(F
+%13java.lang.String"&model.User#getSalt()Ljava/lang/String;*
+
+user
+model.User2	getSalt() «
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java· ·(G
+%14java.lang.String"Ycontroller.PassHash#getHashedPass(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*
+
+phcontroller.PassHash*
+
+%12java.lang.String*
+
+%13java.lang.String23getHashedPass(Ljava/lang/String;Ljava/lang/String;)⁄◊
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java· ·(H
+%15void"+model.User#setPassword(Ljava/lang/String;)V*
+
+user
+model.User*
+
+%14java.lang.String2setPassword(Ljava/lang/String;)ÿ’
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java„ „(
+%16service.UserService"=controller.MyController#getUserService()Lservice/UserService;*
+controller.MyController2getUserService()ﬂ‹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java„ „(%
+%17boolean"/service.UserService#registerUser(Lmodel/User;)Z*
+
+%16service.UserService*
+
+user
+model.User2registerUser(Lmodel/User;)∞≠
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‰ ‰($
+%18void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+)
+sessionjavax.servlet.http.HttpSession*
+user*
+
+user
+model.User22setAttribute(Ljava/lang/String;Ljava/lang/Object;)w
+u
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÂ Â(
+%19java.io.PrintStream"__id*
+""ﬁ€
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÂ Â(
+%20void"0java.io.PrintStream#println(Ljava/lang/Object;)V*
+
+%19java.io.PrintStream*
+
+user
+model.User2println(Ljava/lang/Object;)ë
+é
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÊ Ê(3
+maw,org.springframework.web.servlet.ModelAndView"__id*
+""æª
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÁ Á(
+%21java.lang.String"-model.User#getTipoUsuario()Ljava/lang/String;*
+
+user
+model.User2getTipoUsuario() «
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÁ Á('
+%22boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+%21java.lang.String*
+12equals(Ljava/lang/Object;)*
+2
+3*Í
+5I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java› ›(%∞≠
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java› ›(2
+%6,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndView‚
+ﬂ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java›
+ ›(&
+%7"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*4
+2
+%6,org.springframework.web.servlet.ModelAndView*
+
+register"Å
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java› ›('4
+2
+%6,org.springframework.web.servlet.ModelAndView*∏
+6I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‹ ‹(ﬂ‹
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‹ ‹(
+%0boolean"2org.springframework.validation.Errors#hasErrors()Z*?
+=
+bindingResult,org.springframework.validation.BindingResult2hasErrors()*
+4
+5*–
+paramAnnotationsI
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄$ €(≤
+Ø
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaŸ Ÿ(I
+%1"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*
+
+user
+model.Userí
+è
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄% ⁄(+
+%2"
+__annotate*
+javax.validation.Valid*
+
+user
+model.User≤
+Ø
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄, ⁄(C
+%3"
+__annotate*:8
+6org.springframework.web.bind.annotation.ModelAttribute*
+
+user
+model.Userà
+Ö
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄I ⁄(M
+user
+model.User"__annotation*
+
+%1*
+
+%2*
+
+%3›
+⁄
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaŸ Ÿ(I
+%4"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*?
+=
+bindingResult,org.springframework.validation.BindingResult£
+†
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java⁄] ⁄(j=
+bindingResult,org.springframework.validation.BindingResult"__annotation*
+
+%4…
+∆
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaŸ Ÿ(I
+%5"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*+
+)
+sessionjavax.servlet.http.HttpSessionè
+å
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java€ €()
+sessionjavax.servlet.http.HttpSession"__annotation*
+
+%5*
+6*”
+1I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ	 Ô("Ç
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÔ Ô(5
+3
+maw,org.springframework.web.servlet.ModelAndView:
+user
+model.User:=
+bindingResult,org.springframework.validation.BindingResult:)
+sessionjavax.servlet.http.HttpSessionB
+controller.MyController
