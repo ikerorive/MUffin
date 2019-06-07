@@ -341,6 +341,7 @@ public class MyController {
 		int i = 0;
 		// LinkedHashMap<String,Float> mapa = new LinkedHashMap<>();
 		UserCaracteristics user;
+		char inicialCategoria;
 		ArrayList<UserCaracteristics> listaUserCaracteristics = new ArrayList<>();
 		for (String key : hm.keySet()) {
 			ArrayList<Respuesta> arrayResp = new ArrayList<>();
@@ -354,11 +355,13 @@ public class MyController {
 			arrayResp.add(resp);
 			c = new Categoria();
 			c.setNombre(key);
+			inicialCategoria = c.getNombre().toUpperCase().charAt(0);
+			System.out.println("La inicial de "+c.getNombre() + "es " + inicialCategoria);
 			c.setRespuestas(arrayResp);
 			System.out.println("Categoria: " + c.toString());
 			form.getCategorias().add(c);
 			bal = client
-					.target("http://localhost:8000/bayes?a="
+					.target("http://localhost:8000/bayes"+ inicialCategoria+"?a="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta1() + "&b="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta2() + "&c="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta3() + "&d="
