@@ -81,6 +81,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.ClientResponse;
+
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
@@ -280,7 +281,7 @@ public class MyController {
 		Formulario form = new Formulario();
 		User us = (User) session.getAttribute("user");
 		form.setId(us.getIdUser());
-		HashMap<String, ArrayList<Integer>> hm = new HashMap<>();
+		LinkedHashMap<String, ArrayList<Integer>> hm = new LinkedHashMap<>();
 		form.setCategorias(new ArrayList<>());
 		for (String respuesta : items) {
 			String[] rp = respuesta.split("-");
@@ -291,7 +292,15 @@ public class MyController {
 			}
 			hm.get(key).add(punt);
 		}
+		Categoria c;
 		ArrayList<Categoria> arraycat = new ArrayList<>();
+		Client client = ClientBuilder.newClient();
+		ArrayList<Double> bal=new ArrayList<>();
+		ArrayList<Float> aux = new ArrayList<>();
+		int i=0;
+		//LinkedHashMap<String,Float> mapa = new LinkedHashMap<>();
+		UserCaracteristics user;
+		ArrayList<UserCaracteristics> listaUserCaracteristics = new ArrayList<>();
 		for (String key : hm.keySet()) {
 			ArrayList<Respuesta> arrayResp = new ArrayList<>();
 			Respuesta resp = new Respuesta();
@@ -302,12 +311,35 @@ public class MyController {
 			resp.setPregunta4(arrayInt.get(3));
 			resp.setPregunta5(arrayInt.get(4));
 			arrayResp.add(resp);
-			Categoria c = new Categoria();
+			c= new Categoria();
 			c.setNombre(key);
 			c.setRespuestas(arrayResp);
+			System.out.println("Categoria: "+c.toString());
 			form.getCategorias().add(c);
+			bal = client.target("http://localhost:8000/bayes?a="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta1()+"&b="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta2()+"&c="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta3()+"&d="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta4()+"&e="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta5()).request(MediaType.APPLICATION_JSON).get(ArrayList.class);
+			System.out.println(c.getNombre()+ ": "+bal);
+			//String porcentaje = bal.get(0).toString();
+			//aux.add(Float.parseFloat(porcentaje));
+			//System.out.println("VALOR----> "+bal.get(0).getClass());
+			Float f=bal.get(0).floatValue()*100;
+			
+			aux.add(f);
+			user = new UserCaracteristics();
+			user.setPorcentaje(f);
+			user.setIdCategoria(++i);
+			user.setIdUser(us.getIdUser());
+			listaUserCaracteristics.add(user);
+			
+			//mapa.put(c.getNombre(), f);
 		}
+		System.out.println(listaUserCaracteristics);
+		
+		WebTarget webTarget2 = client.target("http://localhost:8080//cambiarEventosServer/webresources/generic/insertarCaracteristicas");
 
+		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
+		invocationBuilder2.post(Entity.entity(listaUserCaracteristics, MediaType.APPLICATION_JSON));
+		//System.out.println(listaUserCaracteristics);
+		
 		Gson gson = new Gson();
 		String json = gson.toJson(form);
 		System.out.println(json);
@@ -422,7 +454,7 @@ public class MyController {
 		// Client client =
 		// ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
 
-		ResposeList orden = client.target("http://localhost:8080/ordernarEventosServer2/webresources/controller")
+		ResposeList orden = client.target("http://localhost:8080/cambiarEventosServer/webresources/generic/ordenar")
 				.queryParam("id", 2).request(MediaType.APPLICATION_JSON).get(ResposeList.class);
 		System.out.println("RESPUESTA WS----> " + orden.getList());
 

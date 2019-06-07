@@ -10,7 +10,9 @@ package json;
  * @author jonmu
  */
 public class Respuesta {
-    private Integer pregunta1;
+    
+
+	private Integer pregunta1;
     private Integer pregunta2;
     private Integer pregunta3;
     private Integer pregunta4;
@@ -55,5 +57,10 @@ public class Respuesta {
     public void setPregunta5(Integer pregunta5) {
         this.pregunta5 = pregunta5;
     }
+    
+    @Override
+	public String toString() {
+		return this.getPregunta1().toString()+ ", "+this.getPregunta2().toString()+ ", "+this.getPregunta3().toString()+ ", "+this.getPregunta4().toString()+ ", "+this.getPregunta5().toString();
+	}
     
 }
