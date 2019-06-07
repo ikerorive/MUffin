@@ -1,10 +1,10 @@
 /** @file User.java
- *  @brief User
+ *  @brief User class
  *  @authors
  *  Name          | Surname         | Email                                |
  *  ------------- | -------------- | ------------------------------------ |
  *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
- *  @date 12/12/2018
+ *  @date 07/06/2018
  */
 
 /** @brief package model

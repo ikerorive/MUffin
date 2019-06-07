@@ -1,3 +1,14 @@
+/** @file EventoDAOImpl.java
+ *  @brief EventoDAOImpl
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 07/06/2019
+ */
+
+/** @brief package dao.impl
+ */
 package dao.impl;
 
 import java.util.List;
@@ -29,6 +40,9 @@ public class EventoDAOImpl implements EventoDAO {
 		return hibernateTemplate;
 	}
 
+	/*
+	 * ! \brief Se guarda un evento en la DB
+	 */
 	@Override
 	public boolean saveEvento(Evento evento) {
 		int id = (Integer) hibernateTemplate.save(evento);
@@ -37,6 +51,9 @@ public class EventoDAOImpl implements EventoDAO {
 		return false;
 	}
 
+	/*
+	 * ! \brief Devuelve todos los eventos
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Evento> getAllEventos() {
@@ -49,6 +66,9 @@ public class EventoDAOImpl implements EventoDAO {
 			return null;
 	}
 
+	/*
+	 * ! \brief Devuelve el evento con el id seleccionado
+	 */
 	@Override
 	public Evento getEvento(int id) {
 		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Evento.class);
@@ -60,6 +80,9 @@ public class EventoDAOImpl implements EventoDAO {
 			return null;
 	}
 
+	/*
+	 * ! \brief Devuelve los eventos del creador seleccionado
+	 */
 	@Override
 	public List<Evento> getEventosByCreator(int idCreador) {
 		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Evento.class);

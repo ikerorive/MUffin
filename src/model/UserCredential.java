@@ -4,7 +4,7 @@
  *  Name          | Surname         | Email                                |
  *  ------------- | -------------- | ------------------------------------ |
  *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
- *  @date 12/12/2018
+ *  @date 07/06/2019
  */
 
 /** @brief package model

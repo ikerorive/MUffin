@@ -1,3 +1,15 @@
+/** @file QuestionsServiceImpl.java
+ *  @brief QuestionsServiceImpl
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 07/06/2019
+ */
+
+/** @brief package service.impl
+ */
+
 package service.impl;
 
 import java.util.List;
@@ -30,7 +42,9 @@ public class QuestionsServiceImpl implements QuestionsService {
 
 
 
-
+	/*
+	 * ! \brief Llama al dao y devuelve la lista de preguntas
+	 */
 	@Override
 	public List<Questions> getAllQuestions() {
 		// TODO Auto-generated method stub

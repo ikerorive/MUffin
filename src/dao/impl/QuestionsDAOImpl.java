@@ -1,3 +1,14 @@
+/** @file QuestionsDAOImpl.java
+ *  @brief QuestionsDAOImpl
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 07/06/2019
+ */
+
+/** @brief package dao.impl
+ */
 package dao.impl;
 
 import java.util.List;
@@ -31,9 +42,9 @@ public class QuestionsDAOImpl implements QuestionsDAO {
 		return hibernateTemplate;
 	}
 
-
-
-
+	/*
+	 * ! \brief Devuelve todas las preguntas
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Questions> getAllQuestions() {

@@ -4,7 +4,7 @@
  *  Name          | Surname         | Email                                |
  *  ------------- | -------------- | ------------------------------------ |
  *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
- *  @date 12/12/2018
+ *  @date 07/06/2019
  */
 
 /** @brief package dao.impl
@@ -47,6 +47,9 @@ public class UserDAOImpl implements UserDAO {
 		return hibernateTemplate;
 	}
 
+	/*
+	 * ! \brief Guarda un usuario en la DB
+	 */
 	@Override
 	public boolean saveUser(User user) {
 		int id = (Integer) hibernateTemplate.save(user);
@@ -55,6 +58,9 @@ public class UserDAOImpl implements UserDAO {
 		return false;
 	}
 
+	/*
+	 * ! \brief Recoge un usuario con un nombre de usuario y contraseña
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public User getUserDetailsByUsernameAndPassword(String username, String password) {
@@ -83,6 +89,10 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
+	/*
+	 * ! \brief Se usa para añadir un avatar a un usuario. Se le manda un usuario y
+	 * en caso de existir se actualiza con los datos nuevos
+	 */
 	@Override
 	public void addAvatar(User user) {
 		Session session;

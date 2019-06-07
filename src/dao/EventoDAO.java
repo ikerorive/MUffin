@@ -1,3 +1,14 @@
+/** @file EventoDAO.java
+ *  @brief EventoDAO
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 07/06/2019
+ */
+
+/** @brief package dao
+ */
 package dao;
 
 import java.util.List;

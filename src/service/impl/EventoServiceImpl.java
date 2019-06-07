@@ -1,3 +1,14 @@
+/** @file EventoServiceImpl.java
+ *  @brief EventoServiceImpl
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 07/06/2019
+ */
+
+/** @brief package service.impl
+ */
 package service.impl;
 
 import java.util.List;
@@ -24,6 +35,9 @@ public class EventoServiceImpl implements EventoService {
 		this.eventoDAO = eventoDAO;
 	}
 
+	/*
+	 * ! \brief Llama al dao y dependiendo del exito devuelve true o false
+	 */
 	@Override
 	public boolean registerEvento(Evento evento) {
 		boolean isRegister=false;
@@ -33,12 +47,18 @@ public class EventoServiceImpl implements EventoService {
 		return isRegister;
 	}
 
+	/*
+	 * ! \brief Llama al dao y devuelve la lista de eventos
+	 */
 	@Override
 	public List<Evento> getAllEventos() {
 		// TODO Auto-generated method stub
 		return getEventoDAO().getAllEventos();
 	}
 
+	/*
+	 * ! \brief Llama al dao y devuelve el evento
+	 */
 	@Override
 	public Evento getEvento(int id) {
 		// TODO Auto-generated method stub

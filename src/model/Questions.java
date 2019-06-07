@@ -1,3 +1,14 @@
+/** @file Questions.java
+ *  @brief Questions class
+ *  @authors
+ *  Name          | Surname         | Email                                |
+ *  ------------- | -------------- | ------------------------------------ |
+ *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
+ *  @date 12/12/2018
+ */
+
+/** @brief package model
+ */
 package model;
 
 import javax.persistence.Column;

@@ -4,7 +4,7 @@
  *  Name          | Surname         | Email                                |
  *  ------------- | -------------- | ------------------------------------ |
  *  Iker	      | Orive          | iker.orive@alumni.mondragon.edu     |
- *  @date 12/12/2018
+ *  @date 07/06/2019
  */
 
 /** @brief package controller
@@ -139,18 +139,29 @@ public class MyController {
 	}
 
 	///////////////////////////////////////////////////////////////////
+	/*
+	 * ! \brief Redirigir a home
+	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String homePage(HttpSession session) {
 
 		return "home";
 	}
 
+	/*
+	 * ! \brief Redirigir a login, se añade las credenciales de usuario al modelo
+	 * (vacio) para añadirlo despues
+	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage(Model model) {
 		model.addAttribute("userCredential", new UserCredential());
 		return "login";
 	}
 
+	/*
+	 * ! \brief Si el inicio de sesion es correcto se añaden el usuario y avatar (si
+	 * tiene) como atributos de sesion
+	 */
 	@RequestMapping(value = "/loginSuccess", method = RequestMethod.POST)
 	public ModelAndView loginSuccess(@Valid @ModelAttribute("userCredential") UserCredential userCredential,
 			BindingResult bindingResult, HttpSession session) {
@@ -189,12 +200,20 @@ public class MyController {
 		return modelAndView;
 	}
 
+	/*
+	 * ! \brief Añade mensaje de bienvenida
+	 */
 	@ModelAttribute
 	public void headerMessage(Model model) {
 		model.addAttribute("headerMessage", "Welcome");
 
 	}
 
+	/*
+	 * ! \brief Si el registro ha sido correcto desde aqui se llama a crear el
+	 * passhash y el salt. Se añade el user a la DB. Tambien se redirige a las
+	 * preguntas o a home dependiendo del tipo de usuario
+	 */
 	@RequestMapping(value = "/registerSuccess", method = RequestMethod.POST)
 	public ModelAndView registerSuccess(@Valid @ModelAttribute("user") User user, BindingResult bindingResult,
 			HttpSession session) {
@@ -221,6 +240,9 @@ public class MyController {
 
 	}
 
+	/*
+	 * ! \brief Si el evento se ha creado correctamente se añade a la DB
+	 */
 	@RequestMapping(value = "/createEventoSuccess", method = RequestMethod.POST)
 	public ModelAndView createEventoSuccess(@Valid @ModelAttribute("evento") Evento evento, BindingResult bindingResult,
 			HttpSession session) {
@@ -254,14 +276,18 @@ public class MyController {
 		 * evento.getLatitude()).queryParam("longitude", evento.getLongitude())
 		 * .queryParam("eventType", 1);
 		 */
-		
-		System.out.println("Selected Category "+evento.getEventType());
+
+		System.out.println("Selected Category " + evento.getEventType());
 		ModelAndView maw = new ModelAndView("home");
 
 		return maw;
 
 	}
 
+	/*
+	 * ! \brief El evento clickado es añadido a la sesion para usarlo en el chat del
+	 * evento y la pagina de informacion del evento
+	 */
 	@PostMapping("/selectEventSuccess")
 	public String selectEventSuccess(@RequestParam("eventId") int id, RedirectAttributes redirectAttributes,
 			HttpSession session) {
@@ -273,6 +299,10 @@ public class MyController {
 
 	}
 
+	/*
+	 * ! \brief Una vez respondidas las preguntas se llama a la IA para categorizar
+	 * al usuario
+	 */
 	@PostMapping("/formularioSuccess")
 	public String formularioSuccess(@RequestParam("answers") String answers, RedirectAttributes redirectAttributes,
 			HttpSession session) {
@@ -295,10 +325,10 @@ public class MyController {
 		Categoria c;
 		ArrayList<Categoria> arraycat = new ArrayList<>();
 		Client client = ClientBuilder.newClient();
-		ArrayList<Double> bal=new ArrayList<>();
+		ArrayList<Double> bal = new ArrayList<>();
 		ArrayList<Float> aux = new ArrayList<>();
-		int i=0;
-		//LinkedHashMap<String,Float> mapa = new LinkedHashMap<>();
+		int i = 0;
+		// LinkedHashMap<String,Float> mapa = new LinkedHashMap<>();
 		UserCaracteristics user;
 		ArrayList<UserCaracteristics> listaUserCaracteristics = new ArrayList<>();
 		for (String key : hm.keySet()) {
@@ -311,35 +341,43 @@ public class MyController {
 			resp.setPregunta4(arrayInt.get(3));
 			resp.setPregunta5(arrayInt.get(4));
 			arrayResp.add(resp);
-			c= new Categoria();
+			c = new Categoria();
 			c.setNombre(key);
 			c.setRespuestas(arrayResp);
-			System.out.println("Categoria: "+c.toString());
+			System.out.println("Categoria: " + c.toString());
 			form.getCategorias().add(c);
-			bal = client.target("http://localhost:8000/bayes?a="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta1()+"&b="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta2()+"&c="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta3()+"&d="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta4()+"&e="+form.getCategorias().get(i).getRespuestas().get(0).getPregunta5()).request(MediaType.APPLICATION_JSON).get(ArrayList.class);
-			System.out.println(c.getNombre()+ ": "+bal);
-			//String porcentaje = bal.get(0).toString();
-			//aux.add(Float.parseFloat(porcentaje));
-			//System.out.println("VALOR----> "+bal.get(0).getClass());
-			Float f=bal.get(0).floatValue()*100;
-			
+			bal = client
+					.target("http://localhost:8000/bayes?a="
+							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta1() + "&b="
+							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta2() + "&c="
+							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta3() + "&d="
+							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta4() + "&e="
+							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta5())
+					.request(MediaType.APPLICATION_JSON).get(ArrayList.class);
+			System.out.println(c.getNombre() + ": " + bal);
+			// String porcentaje = bal.get(0).toString();
+			// aux.add(Float.parseFloat(porcentaje));
+			// System.out.println("VALOR----> "+bal.get(0).getClass());
+			Float f = bal.get(0).floatValue() * 100;
+
 			aux.add(f);
 			user = new UserCaracteristics();
 			user.setPorcentaje(f);
 			user.setIdCategoria(++i);
 			user.setIdUser(us.getIdUser());
 			listaUserCaracteristics.add(user);
-			
-			//mapa.put(c.getNombre(), f);
+
+			// mapa.put(c.getNombre(), f);
 		}
 		System.out.println(listaUserCaracteristics);
-		
-		WebTarget webTarget2 = client.target("http://localhost:8080//cambiarEventosServer/webresources/generic/insertarCaracteristicas");
+
+		WebTarget webTarget2 = client
+				.target("http://localhost:8080//cambiarEventosServer/webresources/generic/insertarCaracteristicas");
 
 		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
 		invocationBuilder2.post(Entity.entity(listaUserCaracteristics, MediaType.APPLICATION_JSON));
-		//System.out.println(listaUserCaracteristics);
-		
+		// System.out.println(listaUserCaracteristics);
+
 		Gson gson = new Gson();
 		String json = gson.toJson(form);
 		System.out.println(json);
@@ -347,27 +385,39 @@ public class MyController {
 
 	}
 
+	/*
+	 * ! \brief Se añade un atributo de usuario vacio para llenarlo al registrar
+	 */
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerPage(Model model) {
 		model.addAttribute("user", new User());
 		return "register";
 	}
 
+	/*
+	 * ! \brief Se añade un atributo de evento vacio para llenarlo al crear eventos
+	 */
 	@RequestMapping(value = "/createEvento", method = RequestMethod.GET)
 	public String registerEventoPage(Model model) {
 		model.addAttribute("evento", new Evento());
 		return "createEvento";
 	}
 
+	/*
+	 * ! \brief Se añaden todas las preguntas como atributo para usarlas en el
+	 * formulario
+	 */
 	@RequestMapping(value = "/questions", method = RequestMethod.GET)
 	public String questions(Model model, HttpSession session) {
 		// System.out.println(getEventoService().getAllEventos());
 
 		// Client client = ClientBuilder.newClient();
 
-		String bal = client.target("http://localhost:8080/CalculadoraREST/calculadora/suma").queryParam("oper1", 4)
-				.queryParam("oper2", 5).request("text/plain").get(String.class);
-		System.out.println("Respuesta WS ----> " + bal);
+		// String bal =
+		// client.target("http://localhost:8080/CalculadoraREST/calculadora/suma").queryParam("oper1",
+		// 4)
+		// .queryParam("oper2", 5).request("text/plain").get(String.class);
+		// System.out.println("Respuesta WS ----> " + bal);
 
 		List<Questions> listQuestions = getQuestionsService().getAllQuestions();
 		System.out.println(listQuestions);
@@ -376,6 +426,10 @@ public class MyController {
 		return "questions";
 	}
 
+	/*
+	 * ! \brief Se ponen los atributos de usuario y avatar a null para cerrar
+	 * sesions, tambien redirigimos a home
+	 */
 	@RequestMapping(value = "logOff", method = RequestMethod.GET)
 	public String logOff(HttpSession session) {
 		session.setAttribute("user", null);
@@ -383,18 +437,28 @@ public class MyController {
 		return "home";
 	}
 
+	/*
+	 * ! \brief Se redirige a uploadAvatar
+	 */
 	@RequestMapping(value = "uploadAvatar", method = RequestMethod.GET)
 	public String uploadAvatar(HttpSession session) {
 
 		return "uploadAvatar";
 	}
 
+	/*
+	 * ! \brief Se redirige a eventoInfo
+	 */
 	@RequestMapping(value = "eventoInfo", method = RequestMethod.GET)
 	public String eventoInfo(HttpSession session) {
 
 		return "eventoInfo";
 	}
 
+	/*
+	 * ! \brief El usuario se suscribe a un evento y se llama a los web services
+	 * para cambiar los porcentajes
+	 */
 	@RequestMapping(value = "suscribeToEvent", method = RequestMethod.GET)
 	public String suscribeToEvent(HttpSession session) {
 		System.out.println("SE SUSCRIBE A EVENTO");
@@ -431,6 +495,10 @@ public class MyController {
 		return "chat";
 	}
 
+	/*
+	 * ! \brief Se redirige a pruebas (se usa para realizar pruebas durante el
+	 * desarrollo)
+	 */
 	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
 	public String pruebas(HttpSession session) {
 
@@ -445,6 +513,10 @@ public class MyController {
 		return "pruebas";
 	}
 
+	/*
+	 * ! \brief Se redirige a evento Lista y se ponen como atributo los eventos
+	 * ordenados según los datos devueltos por el web service
+	 */
 	@RequestMapping(value = "eventoLista", method = RequestMethod.GET)
 	public String eventoLista(HttpSession session, Model model) {
 
@@ -485,6 +557,9 @@ public class MyController {
 		return "eventoLista";
 	}
 
+	/*
+	 * ! \brief Se añaden como atributo los eventos creador por el usuario activo
+	 */
 	@RequestMapping(value = "misEventos", method = RequestMethod.GET)
 	public String misEventos(HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
@@ -494,6 +569,9 @@ public class MyController {
 		return "eventoLista";
 	}
 
+	/*
+	 * ! \brief Se recoge el avatar desde la web y se guarda en la DB
+	 */
 	@PostMapping("/uploadAction")
 	public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes,
 			HttpSession session) {
@@ -521,6 +599,9 @@ public class MyController {
 		return "redirect:/";
 	}
 
+	/*
+	 * ! \brief Convierte un MultipartFile a File
+	 */
 	public File convert(MultipartFile file) throws IOException {
 		File convFile = new File(file.getOriginalFilename());
 		convFile.createNewFile();
@@ -530,6 +611,9 @@ public class MyController {
 		return convFile;
 	}
 
+	/*
+	 * ! \brief Funcion que se ejecuta al iniciar el servlet
+	 */
 	public void init() throws ServletException {
 		// Initialization code like set up database etc....
 		System.out.println("SERVLET INITIALIZATION");
