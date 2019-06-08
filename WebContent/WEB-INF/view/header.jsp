@@ -56,6 +56,8 @@
 				%>
 				<li class="nav-item"><a class="nav-link"
 					href="/MUffin/eventoLista">Eventos</a></li>
+					<li class="nav-item"><a class="nav-link"
+					href="/MUffin/pruebas">Copia de seguridad</a></li>
 				<%
 					} else {
 				%>

@@ -13,11 +13,13 @@ package controller;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -80,6 +82,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.sun.jersey.api.client.ClientResponse;
 
 import com.sun.jersey.api.client.WebResource;
@@ -89,6 +92,7 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
 
 import json.Categoria;
 import json.Formulario;
+import json.MensajesCopia;
 import json.ResposeList;
 import json.Respuesta;
 import json.UserCaracteristics;
@@ -356,12 +360,12 @@ public class MyController {
 			c = new Categoria();
 			c.setNombre(key);
 			inicialCategoria = c.getNombre().toUpperCase().charAt(0);
-			System.out.println("La inicial de "+c.getNombre() + "es " + inicialCategoria);
+			System.out.println("La inicial de " + c.getNombre() + "es " + inicialCategoria);
 			c.setRespuestas(arrayResp);
 			System.out.println("Categoria: " + c.toString());
 			form.getCategorias().add(c);
 			bal = client
-					.target("http://localhost:8000/bayes"+ inicialCategoria+"?a="
+					.target("http://localhost:8000/bayes" + inicialCategoria + "?a="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta1() + "&b="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta2() + "&c="
 							+ form.getCategorias().get(i).getRespuestas().get(0).getPregunta3() + "&d="
@@ -386,7 +390,7 @@ public class MyController {
 		System.out.println(listaUserCaracteristics);
 
 		WebTarget webTarget2 = client
-				.target("http://localhost:8080//cambiarEventosServer/webresources/generic/insertarCaracteristicas");
+				.target("http://localhost:8080/Muffin.v.2/webresources/generic/insertarCaracteristicas");
 
 		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
 		invocationBuilder2.post(Entity.entity(listaUserCaracteristics, MediaType.APPLICATION_JSON));
@@ -483,28 +487,34 @@ public class MyController {
 		// Client client =
 		// ClientBuilder.newBuilder().register(ResteasyJacksonProvider.class).build();
 		UserCaracteristics userCaracteristics = client
-				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/uno")
+				.target("http://localhost:8080/Muffin.v.2/webresources/generic/getUser")
 				.queryParam("idUser", user.getIdUser()).queryParam("idCategoria", evto.getEventType())
 				.request(MediaType.APPLICATION_JSON).get(UserCaracteristics.class);
 
 		ArrayList<UserCaracteristics> listUserCar = client
-				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/muchos")
+				.target("http://localhost:8080/Muffin.v.2/webresources/generic/getResto")
 				.queryParam("idUser", user.getIdUser()).queryParam("idCategoria", evto.getEventType())
 				.request(MediaType.APPLICATION_JSON).get(ArrayList.class);
 		System.out.println("LISTA . -> " + listUserCar);
 		// Client cliente = ClientBuilder.newClient(new
 		// ClientConfig().register(LoggingFilter.class));
-		WebTarget webTarget = client
-				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacion");
+		WebTarget webTarget = client.target("http://localhost:8080/Muffin.v.2/webresources/generic/actualizarUsuario");
 
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		invocationBuilder.put(Entity.entity(userCaracteristics, MediaType.APPLICATION_JSON));
 
-		WebTarget webTarget2 = client
-				.target("http://localhost:8080/cambiarEventosServer/webresources/generic/aplicacionMuchos");
+		WebTarget webTarget2 = client.target("http://localhost:8080/Muffin.v.2/webresources/generic/actualizarResto");
 
 		Invocation.Builder invocationBuilder2 = webTarget2.request(MediaType.APPLICATION_JSON);
 		invocationBuilder2.put(Entity.entity(listUserCar, MediaType.APPLICATION_JSON));
+
+		WebTarget wtarget = client.target("http://localhost:8080/Muffin.v.2/webresources/generic/anadirUserEvento")
+				.queryParam("idUser", user.getIdUser()).queryParam("evento", evto.getIdEvento())
+				.queryParam("interes", 1);
+
+//Perform a request to the target
+		wtarget.request().post(Entity.text(""));
+
 		// client.close();
 		return "chat";
 	}
@@ -515,15 +525,26 @@ public class MyController {
 	 */
 	@RequestMapping(value = "pruebas", method = RequestMethod.GET)
 	public String pruebas(HttpSession session) {
+		User user = (User) session.getAttribute("user");
+		MensajesCopia mensajes = client.target("http://localhost:8080/Muffin.v.2/webresources/chat/copiaSeguridad")
+				.queryParam("username", user.getUsername()).request(MediaType.APPLICATION_JSON).get(MensajesCopia.class);
+		// MensajesCopia mensajes = new MensajesCopia(mensajesC);
+		// String chat, Date date, String username, String message
+		// mensajes.getMsgCopiaSeguridad().add(new MsgCopiaSeguridad(chatId,));
 
-		// Client client = ClientBuilder.newClient();
-		User user = new User();
-		user.setIdUser(44);
-		user.setUsername("userPruebas");
-		String s = client.target("http://localhost:8080/MuffinRMQ/webresources/generic/crear").queryParam("id", 4)
-				.queryParam("descripcion", "asdasdasddsasdads").queryParam("user", user).request("text/plain")
-				.get(String.class);
-		System.out.println(s);
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		String json = gson.toJson(mensajes);
+		System.out.println(json);
+
+		BufferedWriter writer;
+		String file = "C:\\Users\\Public\\Muffin\\"+user.getUsername()+"MuffinSecurityCopy.json";
+		try {
+			writer = new BufferedWriter(new FileWriter(file));
+			writer.write(json);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return "pruebas";
 	}
 

@@ -85,9 +85,40 @@
 	//http://localhost:8080/Muffin.v.2/webresources/generic/crearEvento?oper1=5&oper2=6
 	window.setInterval(function() {
 		/// call your function here
+
 		actualizarMsg();
 	}, 5000);
-	$(document).ready(actualizarMsg());
+	$(document).ready(whenReady());
+
+	function whenReady() {
+		console.log("IS READY");
+		actualizarMsg();
+		var userid = $("#userId").val();
+
+		var eventoid = $("#eventoId").val();
+
+		fetch(
+				"http://localhost:8080/Muffin.v.2/webresources/generic/getInteres?idUser="
+						+ userid + "&evento=" + eventoid, {
+
+				}).then(function(response) {
+			response.text().then(function(text) {
+				//$(".mezua").remove();
+				
+				if(text=='1'){
+					$("#suscribeButton").attr("disabled", true);
+					console.log("no suscrito " + text);
+					
+				}else{
+					$("#txtEnviar").attr("disabled", true);
+					console.log("suscrito " + text);
+				}
+				
+
+			});
+			//appendMyMessage();
+		});
+	}
 
 	function actualizarMsg() {
 
@@ -121,19 +152,11 @@
 
 															var html;
 															if (username == array1[0]) {
-																console
-																		.log("ES IGUAL "
-																				+ username
-																				+ " "
-																				+ array1[0]);
+
 																html = '<li class="right clearfix mezua">';
 																//lado="right";
 															} else {
-																console
-																		.log("NO ES IGUAL "
-																				+ username
-																				+ " "
-																				+ array1[0]);
+
 																html = '<li class="left clearfix mezua">';
 																//lador="left";
 															}
@@ -208,19 +231,11 @@
 
 																			var html;
 																			if (username == array1[0]) {
-																				console
-																						.log("ES IGUAL "
-																								+ username
-																								+ " "
-																								+ array1[0]);
+
 																				html = '<li class="right clearfix mezua">';
 																				//lado="right";
 																			} else {
-																				console
-																						.log("NO ES IGUAL "
-																								+ username
-																								+ " "
-																								+ array1[0]);
+
 																				html = '<li class="left clearfix mezua">';
 																				//lador="left";
 																			}
