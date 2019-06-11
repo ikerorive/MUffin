@@ -5,10 +5,9 @@
 <div class="row justify-content-center">
 
 	<%
-		// retrieve your list from the request, with casting 
 		List<Evento> list = (List<Evento>) session.getAttribute("eventos");
-
-		for (Evento evt : list) {
+		if (list != null) {
+			for (Evento evt : list) {
 	%>
 
 	<div
@@ -22,7 +21,8 @@
 						out.println(evt.getName());
 					%>
 				</h1>
-				<img src='<%out.println(evt.getImgUrl());%>' class='w-100'>
+				<img src='<%out.println(evt.getImgUrl());%>' alt="eventBackground"
+					class='w-100'>
 			</div>
 			<div class="back">
 				<div class="card-body text-center">
@@ -37,11 +37,7 @@
  %>
 						</span>
 					</p>
-					<p>
-						<i class="fas fa-user-check"></i> 22/<%
-							out.println(evt.getMaxSize());
-						%>
-					</p>
+					
 					<form method="POST" enctype="multipart/form-data"
 						action="selectEventSuccess">
 						<input type="hidden" name="eventId"
@@ -57,6 +53,7 @@
 	</div>
 
 	<%
+		}
 		}
 	%>
 

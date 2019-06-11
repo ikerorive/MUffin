@@ -1,44 +1,50 @@
 
 Rcontroller.MyController#logOff(Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≤ ≤("paramAnnotations*¿
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÄ Ä("paramAnnotations*¿
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≤ ≤(*…
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÄ Ä(*…
 ∆
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java± ±(>
-%2"
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaˇ ˇ(>
+%3"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*+
 )
 sessionjavax.servlet.http.HttpSessionè
 å
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≤" ≤())
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÄ" Ä())
 sessionjavax.servlet.http.HttpSession"__annotation*
 
-%2*
-1*Ô
+%3*
+1*ï
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≥ ≥(	°û
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÅ Å(	°û
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≥ ≥($
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÅ Å($
 
 %0void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
 sessionjavax.servlet.http.HttpSession*
 user*
-""22setAttribute(Ljava/lang/String;Ljava/lang/Object;)£†
+""22setAttribute(Ljava/lang/String;Ljava/lang/Object;)ï
+í
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¥ ¥(&
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÇ Ç(
+%1java.lang.String"__id*'*%
+controller.MyController"
+AVATAR±Æ
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÇ Ç($
 
-%1void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+%2void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
-sessionjavax.servlet.http.HttpSession*
-
-avatar*
+sessionjavax.servlet.http.HttpSession*
+
+%1java.lang.String*
 ""22setAttribute(Ljava/lang/String;Ljava/lang/Object;)"U
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÉ É(
 home:)
 sessionjavax.servlet.http.HttpSessionB
 controller.MyController

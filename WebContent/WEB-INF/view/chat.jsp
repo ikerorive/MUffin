@@ -13,17 +13,16 @@
 	value="<%out.print(user.getUsername());%>" />
 <input type="hidden" id="eventoId"
 	value="<%out.print(evt.getIdEvento());%>" />
-<img src="resources/img/party2.jpg" class="bgChat" />
+<img src="resources/img/party2.jpg" class="bgChat" alt="bg"/>
 <div class="d-flex justify-content-around py-0 chatTop">
-	<a href="/MUffin/eventoInfo" class=" btn purple-gradient"> <i
-		class="fas fa-info"></i>
+	<a href="/MUffin/eventoInfo" class=" btn purple-gradient"> <em
+		class="fas fa-info"></em>
 	</a> <a href="/MUffin/suscribeToEvent" class="btn purple-gradient"
 		id="suscribeButton">Subscribe</a>
 </div>
 <div class="whiteBg"></div>
 <br>
 <br>
-<!-- ------------------------------------------------------------------------ -->
 
 <div class="d-flex justify-content-center">
 	<div class="chat-message ">
@@ -32,7 +31,7 @@
 				<div class="chat-body clearfix">
 					<div class="header">
 						<strong class="primary-font">MUffin Team</strong> <small
-							class="float-right text-muted"><i class="far fa-clock"></i>
+							class="float-right text-muted"><em class="far fa-clock"></em>
 						</small>
 					</div>
 					<p>Se debe observar respeto y buenas maneras a la hora de
@@ -45,7 +44,6 @@
 	</div>
 </div>
 
-<!-- ------------------------------------------------------------------------ -->
 <br>
 <br>
 <br>
@@ -82,7 +80,6 @@
 </div>
 
 <script>
-	//http://localhost:8080/Muffin.v.2/webresources/generic/crearEvento?oper1=5&oper2=6
 	window.setInterval(function() {
 		/// call your function here
 
@@ -103,7 +100,6 @@
 
 				}).then(function(response) {
 			response.text().then(function(text) {
-				//$(".mezua").remove();
 				
 				if(text=='1'){
 					$("#suscribeButton").attr("disabled", true);
@@ -146,7 +142,6 @@
 														.forEach(function(
 																valor, indice,
 																array) {
-															//console.log("En el índice " + indice + " hay este valor: " + valor);
 															var array1 = valor
 																	.split(";");
 
@@ -154,11 +149,9 @@
 															if (username == array1[0]) {
 
 																html = '<li class="right clearfix mezua">';
-																//lado="right";
 															} else {
 
 																html = '<li class="left clearfix mezua">';
-																//lador="left";
 															}
 
 															html += '<div class="chat-body clearfix">';
@@ -166,7 +159,7 @@
 															html += '<strong class="primary-font">'
 																	+ array1[0]
 																	+ '</strong> <small'   
-																html +='class="float-right text-muted"><i class="far fa-clock"></i>';
+																html +='class="float-right text-muted"><em class="far fa-clock"></em>';
 															html += ''
 																	+ array1[2]
 																	+ '</small>';
@@ -177,10 +170,8 @@
 															html += '</div>';
 															$(".chat").append(
 																	html);
-															//appendMyMessage();
 
 														});
-												//appendMyMessage();
 											});
 						})
 
@@ -225,7 +216,6 @@
 																				valor,
 																				indice,
 																				array) {
-																			//console.log("En el índice " + indice + " hay este valor: " + valor);
 																			var array1 = valor
 																					.split(";");
 
@@ -237,7 +227,6 @@
 																			} else {
 
 																				html = '<li class="left clearfix mezua">';
-																				//lador="left";
 																			}
 
 																			html += '<div class="chat-body clearfix">';
@@ -245,7 +234,7 @@
 																			html += '<strong class="primary-font">'
 																					+ array1[0]
 																					+ '</strong> <small'   
-																			html +='class="float-right text-muted"><i class="far fa-clock"></i>';
+																			html +='class="float-right text-muted"><em class="far fa-clock"></em>';
 																			html += ''
 																					+ array1[2]
 																					+ '</small>';

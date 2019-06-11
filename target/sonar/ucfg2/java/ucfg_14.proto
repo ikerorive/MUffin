@@ -1,11 +1,11 @@
 
 Vcontroller.MyController#registerPage(Lorg/springframework/ui/Model;)Ljava/lang/String;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaˆ ˆ("paramAnnotations*¸
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà à("paramAnnotations*¸
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaˆ ˆ((Å
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà à((Å
 Â
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‡ ‡(A
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß ß(A
 %3"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*'
@@ -13,27 +13,27 @@ __annotate*:8
 modelorg.springframework.ui.Model‹
 ˆ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaˆ" ˆ('%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaà" à('%
 modelorg.springframework.ui.Model"__annotation*
 
 %3*
 1*ô
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‰ ‰(ki
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaá á(ki
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‰! ‰(%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaá! á(%
 %0
 model.User"
 model.User}
 {
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‰ ‰('
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaá á('
 %1"model.User#<init>()V*
 
 %0
 model.UserÜÙ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java‰ ‰(("
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaá á(("
 %2org.springframework.ui.Model"morg.springframework.ui.Model#addAttribute(Ljava/lang/String;Ljava/lang/Object;)Lorg/springframework/ui/Model;*'
 %
 modelorg.springframework.ui.Model*
@@ -42,7 +42,7 @@ I
 %0
 model.User22addAttribute(Ljava/lang/String;Ljava/lang/Object;)"Y
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaŠ Š(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaâ â(
 
 register:%
 modelorg.springframework.ui.ModelB

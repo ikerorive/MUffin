@@ -41,7 +41,7 @@
 				class="btn btn-md purple-gradient m-0 px-3 py-2 z-depth-0 waves-effect"
 				type="button" id="button-addon1" data-toggle="modal"
 				data-target="#basicExampleModal">
-				<i class="fas fa-map-marked-alt"></i>
+				<em class="fas fa-map-marked-alt"></em>
 			</button>
 		</div>
 	</div>

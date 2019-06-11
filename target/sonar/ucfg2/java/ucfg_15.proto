@@ -1,11 +1,11 @@
 
 \controller.MyController#registerEventoPage(Lorg/springframework/ui/Model;)Ljava/lang/String;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaë ë(!"paramAnnotations*∏
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÈ È(!"paramAnnotations*∏
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaë! ë(.≈
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÈ! È(.≈
 ¬
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaê ê(E
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaË Ë(E
 %3"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*'
@@ -13,24 +13,24 @@ __annotate*:8
 modelorg.springframework.ui.Modelã
 à
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaë( ë(-%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÈ( È(-%
 modelorg.springframework.ui.Model"__annotation*
 
 %3*
 1*Ö
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí í(om
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÍ Í(om
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí# í()
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÍ# Í()
 %0model.Evento"model.EventoÅ
 
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí í(+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÍ Í(+
 %1"model.Evento#<init>()V*
 
 %0model.Evento‡›
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaí í(,"
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÍ Í(,"
 %2org.springframework.ui.Model"morg.springframework.ui.Model#addAttribute(Ljava/lang/String;Ljava/lang/Object;)Lorg/springframework/ui/Model;*'
 %
 modelorg.springframework.ui.Model*
@@ -39,7 +39,7 @@ I
 
 %0model.Evento22addAttribute(Ljava/lang/String;Ljava/lang/Object;)"]
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì ì(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÎ Î(
 createEvento:%
 modelorg.springframework.ui.ModelB
 controller.MyController

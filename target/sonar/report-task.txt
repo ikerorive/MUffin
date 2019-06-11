@@ -3,5 +3,5 @@ projectKey=ikerorive_MUffin
 serverUrl=https://sonarcloud.io
 serverVersion=7.8.0.25856
 dashboardUrl=https://sonarcloud.io/dashboard?id=ikerorive_MUffin
-ceTaskId=AWsw-yuoH9Zeu8Cdm0Ah
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWsw-yuoH9Zeu8Cdm0Ah
+ceTaskId=AWs7Cu8lFNspoD7e3NSG
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWs7Cu8lFNspoD7e3NSG

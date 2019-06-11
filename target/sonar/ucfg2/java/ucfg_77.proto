@@ -1,16 +1,16 @@
 
-+model.Evento#getStrDate()Ljava/lang/String;<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javab b("1*š
-1<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javac	 c(}
-{
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javac	 c(
-%0java.lang.String"__id**
-model.Evento"	
-strDate"X
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javac c(
-
-%0java.lang.StringB
-model.Evento
+0json.Respuesta#getPregunta5()Ljava/lang/Integer;>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java5 5("1*¨
+1>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java6 6(…
+‚
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java6 6(
+%0java.lang.Integer"__id*!*
+json.Respuesta"
+	pregunta5"[
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java6 6(
+
+%0java.lang.IntegerB
+json.Respuesta

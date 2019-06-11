@@ -1,12 +1,12 @@
 
 ∏controller.MyController#loginSuccess(Lmodel/UserCredential;Lorg/springframework/validation/BindingResult;Ljavax/servlet/http/HttpSession;)Lorg/springframework/web/servlet/ModelAndView;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶ ¶(!"paramAnnotations*º
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç ç(!"paramAnnotations*º
 13I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≤ ≤(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaô ô(
 ∞≠
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≤ ≤(%
-%16void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaô ô(%
+%17void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
 sessionjavax.servlet.http.HttpSession*
 user*
@@ -14,67 +14,67 @@ I
 user
 model.User22setAttribute(Ljava/lang/String;Ljava/lang/Object;)Æ´
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≥ ≥(
-%17java.sql.Blob"%model.User#getAvatar()Ljava/sql/Blob;*
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaö ö(
+%18java.sql.Blob"%model.User#getAvatar()Ljava/sql/Blob;*
 
 user
 model.User2getAvatar()*
 3
 11*∫
 2I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈# ≈(-±Æ
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨# ¨(-±Æ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈("3
-%28,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndView‰
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨ ¨("3
+%34,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndView‰
 ·
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈(.
-%29"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*5
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨ ¨(.
+%35"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*5
 3
-%28,org.springframework.web.servlet.ModelAndView*
+%34,org.springframework.web.servlet.ModelAndView*
 
 notFound…
 ∆
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈(.<
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨ ¨(.<
 modelAndView,org.springframework.web.servlet.ModelAndView"__id*5
 3
-%28,org.springframework.web.servlet.ModelAndView*
-1*Â
+%34,org.springframework.web.servlet.ModelAndView*
+1*ç
 14I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨/ ¨(8∞≠
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì/ ì(8∞≠
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨" ¨(.2
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì" ì(.2
 %8,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndView·
 ﬁ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨ ¨(9
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì ì(9
 %9"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*4
 2
 %8,org.springframework.web.servlet.ModelAndView*	
 welcome»
 ≈
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¨ ¨(:<
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaì ì(:<
 modelAndView,org.springframework.web.servlet.ModelAndView"__id*4
 2
 %8,org.springframework.web.servlet.ModelAndViewÿ’
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠ ≠(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaî î(
 %10service.UserService"=controller.MyController#getUserService()Lservice/UserService;*
 controller.MyController2getUserService()÷”
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠6 ≠(R
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaî6 î(R
 %11java.lang.String"4model.UserCredential#getUsername()Ljava/lang/String;*(
 &
 userCredentialmodel.UserCredential2getUsername()÷”
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠T ≠(p
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaîT î(p
 %12java.lang.String"4model.UserCredential#getPassword()Ljava/lang/String;*(
 &
 userCredentialmodel.UserCredential2getPassword()—Œ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠ ≠(q
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaî î(q
 %13
 model.User"\service.UserService#validateUserCredential(Ljava/lang/String;Ljava/lang/String;)Lmodel/User;*
 
@@ -85,23 +85,29 @@ model.User"\service.UserService#validateUserCredential(Ljava/lang/String;Ljava/l
 %12java.lang.String2<validateUserCredential(Ljava/lang/String;Ljava/lang/String;)|
 z
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠ ≠(r
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaî î(r
 user
 model.User"__id*
 
 %13
-model.User§°
+model.Userñ
+ì
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÆ Æ(&
-%14void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï(
+%14java.lang.String"__id*'*%
+controller.MyController"
+AVATAR≥∞
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï($
+%15void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
-sessionjavax.servlet.http.HttpSession*
-
-avatar*
+sessionjavax.servlet.http.HttpSession*
+
+%14java.lang.String*
 ""22setAttribute(Ljava/lang/String;Ljava/lang/Object;)¢ü
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaØ Ø($
-%15void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañ ñ($
+%16void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
 sessionjavax.servlet.http.HttpSession*
 user*
@@ -109,77 +115,83 @@ I
 2
 13*‹
 3I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java√
- √("ã
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java™
+ ™("ã
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java√ √(>
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java™ ™(>
 <
 modelAndView,org.springframework.web.servlet.ModelAndView*Ë
 15I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java© ©("∞≠
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaê ê("∞≠
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java© ©(2
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaê ê(2
 %6,org.springframework.web.servlet.ModelAndView",org.springframework.web.servlet.ModelAndViewﬂ
 ‹
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java©
- ©(#
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaê
+ ê(#
 %7"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*4
 2
 %6,org.springframework.web.servlet.ModelAndView*	
 login"Å
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java© ©($4
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaê ê($4
 2
 %6,org.springframework.web.servlet.ModelAndView*ª
 16I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java® ®(ﬂ‹
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaè è(ﬂ‹
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java® ®(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaè è(
 %0boolean"2org.springframework.validation.Errors#hasErrors()Z*?
 =
 bindingResult,org.springframework.validation.BindingResult2hasErrors()*
 14
-15*¿
+15*Ë
 8I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(,¢
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(,¢
 ü
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(,%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(,%
 imagejava.awt.image.BufferedImage"__id*%
 #
-%20java.awt.image.BufferedImage≈¬
+%21java.awt.image.BufferedImageñ
+ì
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∑ ∑(*
-%21void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û( 
+%22java.lang.String"__id*'*%
+controller.MyController"
+AVATAR‘—
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û((
+%23void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
-sessionjavax.servlet.http.HttpSession*
-
-avatar*'
+sessionjavax.servlet.http.HttpSession*
+
+%22java.lang.String*'
 %
 imagejava.awt.image.BufferedImage22setAttribute(Ljava/lang/String;Ljava/lang/Object;)*
 3*‚
 9I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(9ç
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(9ç
 ä
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(9
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(9
 injava.io.InputStream"__id*
 
-%19java.io.InputStream¸
+%20java.io.InputStream¸
 ˘
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∂ ∂(+#
-%20java.awt.image.BufferedImage"Ojavax.imageio.ImageIO#read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;*"
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(+#
+%21java.awt.image.BufferedImage"Ojavax.imageio.ImageIO#read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;*"
 javax.imageio.ImageIO*
 
 injava.io.InputStream*
 8*°
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶! ß(4∆
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç! é(4∆
 √
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java• •(F
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaå å(F
 %1"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*(
@@ -187,7 +199,7 @@ __annotate*:8
 userCredentialmodel.UserCredential¶
 £
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶" ¶((
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç" ç((
 %2"
 __annotate*
 javax.validation.Valid*(
@@ -195,7 +207,7 @@ __annotate*
 userCredentialmodel.UserCredential∆
 √
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶) ¶(J
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaç) ç(J
 %3"
 __annotate*:8
 6org.springframework.web.bind.annotation.ModelAttribute*(
@@ -203,7 +215,7 @@ __annotate*:8
 userCredentialmodel.UserCredentialú
 ô
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¶Z ¶(h&
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaçZ ç(h&
 userCredentialmodel.UserCredential"__annotation*
 
 %1*
@@ -213,7 +225,7 @@ I
 %3›
 ⁄
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java• •(F
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaå å(F
 %4"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*?
@@ -221,13 +233,13 @@ __annotate*:8
 bindingResult,org.springframework.validation.BindingResult£
 †
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß ß(=
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaé é(=
 bindingResult,org.springframework.validation.BindingResult"__annotation*
 
 %4…
 ∆
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java• •(F
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaå å(F
 %5"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*+
@@ -235,32 +247,32 @@ __annotate*:8
 sessionjavax.servlet.http.HttpSessionè
 å
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaß, ß(3)
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaé, é(3)
 sessionjavax.servlet.http.HttpSession"__annotation*
 
 %5*
 16*¢
 10I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(8À»
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(8À»
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(8
-%19java.io.InputStream"4java.sql.Blob#getBinaryStream()Ljava/io/InputStream;*
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(8
+%20java.io.InputStream"4java.sql.Blob#getBinaryStream()Ljava/io/InputStream;*
 
-%18java.sql.Blob2getBinaryStream()*
+%19java.sql.Blob2getBinaryStream()*
 9*Ü
 11I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(Æ´
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(Æ´
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaµ µ(&
-%18java.sql.Blob"%model.User#getAvatar()Ljava/sql/Blob;*
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(&
+%19java.sql.Blob"%model.User#getAvatar()Ljava/sql/Blob;*
 
 user
 model.User2getAvatar()*
 10*‹
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java»	 »("ã
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaØ	 Ø("ã
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(>
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaØ Ø(>
 <
 modelAndView,org.springframework.web.servlet.ModelAndView:&
 userCredentialmodel.UserCredential:=

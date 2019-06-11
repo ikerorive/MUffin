@@ -1,11 +1,11 @@
 
 Scontroller.MyController#loginPage(Lorg/springframework/ui/Model;)Ljava/lang/String;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú("paramAnnotations*∏
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÉ É("paramAnnotations*∏
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(%≈
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÉ É(%≈
 ¬
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ(>
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÇ Ç(>
 %3"
 __annotate*:8
 6org.springframework.web.bind.annotation.RequestMapping*'
@@ -13,24 +13,24 @@ __annotate*:8
 modelorg.springframework.ui.Modelã
 à
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú($%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÉ É($%
 modelorg.springframework.ui.Model"__annotation*
 
 %3*
 1*Ø
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(}
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ Ñ(}
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù+ ù(9
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ+ Ñ(9
 %0model.UserCredential"model.UserCredentialí
 è
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù' ù(;
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ' Ñ(;
 %1"model.UserCredential#<init>()V*
 
 %0model.UserCredentialÌ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(<"
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÑ Ñ(<"
 %2org.springframework.ui.Model"morg.springframework.ui.Model#addAttribute(Ljava/lang/String;Ljava/lang/Object;)Lorg/springframework/ui/Model;*'
 %
 modelorg.springframework.ui.Model*
@@ -38,7 +38,7 @@ I
 
 %0model.UserCredential22addAttribute(Ljava/lang/String;Ljava/lang/Object;)"V
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(	
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÖ Ö(	
 login:%
 modelorg.springframework.ui.ModelB
 controller.MyController

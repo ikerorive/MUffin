@@ -1,16 +1,16 @@
 
--model.Evento#getLongitude()Ljava/lang/String;<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaR R("1*œ
-1<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaS	 S(
-}
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaS	 S(
-%0java.lang.String"__id**
-model.Evento"
-	longitude"X
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaS S(
-
-%0java.lang.StringB
-model.Evento
+0json.Respuesta#getPregunta3()Ljava/lang/Integer;>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java% %("1*¨
+1>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java& &(…
+‚
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java& &(
+%0java.lang.Integer"__id*!*
+json.Respuesta"
+	pregunta3"[
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java& &(
+
+%0java.lang.IntegerB
+json.Respuesta

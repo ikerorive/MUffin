@@ -1,16 +1,16 @@
 
-0json.Respuesta#getPregunta1()Ljava/lang/Integer;>
-4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java ("1*®
-1>
-4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (Ö
-Ç
->
-4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (
-%0java.lang.Integer"__id*!*
-json.Respuesta"
-	pregunta1"[
->
-4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (
-
-%0java.lang.IntegerB
-json.Respuesta
+9json.MensajesCopia#getMsgCopiaSeguridad()Ljava/util/List;B
+8C:\Users\ikorm\git\MUffinGIT\src\json\MensajesCopia.java# (7"1*∫
+1B
+8C:\Users\ikorm\git\MUffinGIT\src\json\MensajesCopia.java ( í
+è
+B
+8C:\Users\ikorm\git\MUffinGIT\src\json\MensajesCopia.java ( 
+%0java.util.List"__id*-*+
+json.MensajesCopia"
+msgCopiaSeguridad"\
+B
+8C:\Users\ikorm\git\MUffinGIT\src\json\MensajesCopia.java (!
+
+%0java.util.ListB
+json.MensajesCopia

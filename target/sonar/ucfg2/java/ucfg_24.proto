@@ -1,57 +1,57 @@
 
 Õcontroller.MyController#handleFileUpload(Lorg/springframework/web/multipart/MultipartFile;Lorg/springframework/web/servlet/mvc/support/RedirectAttributes;Ljavax/servlet/http/HttpSession;)Ljava/lang/String;I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¿ ¿("paramAnnotations*Ω
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañ ñ("paramAnnotations*Ω
 13I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∆ ∆(2Å
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(2Å
 
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∆ ∆(3
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(3
 user
 model.User"__id*
 
 %8java.lang.Object·ﬁ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java«! «(0
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù! ù(0
 %9$Array"<org.springframework.web.multipart.MultipartFile#getBytes()[B*9
 7
 file/org.springframework.web.multipart.MultipartFile2
 getBytes()*
 12*Í
 14I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈('íè
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ('íè
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java∆ ∆(2
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaú ú(2
 %8java.lang.Object"Qjavax.servlet.http.HttpSession#getAttribute(Ljava/lang/String;)Ljava/lang/Object;*+
 )
 sessionjavax.servlet.http.HttpSession*
 user2 getAttribute(Ljava/lang/String;)*
 13*π
 15I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈(·ﬁ
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ(·ﬁ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≈ ≈(&
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaõ õ(&
 %7$Array"<org.springframework.web.multipart.MultipartFile#getBytes()[B*9
 7
 file/org.springframework.web.multipart.MultipartFile2
 getBytes()*
 14*Ó
 16I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¬ ¬(v
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaò ò(v
 t
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¬ ¬(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaò ò(
 %0java.io.PrintStream"__id*
 ""ª
 ∏
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¬ ¬((
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaò ò((
 %1java.lang.String"__concat*
 
 FILE ---->*9
 7
 file/org.springframework.web.multipart.MultipartFile‡›
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¬ ¬()
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaò ò()
 
 %2void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
@@ -60,10 +60,10 @@ I
 %1java.lang.String2println(Ljava/lang/String;)*
 15*∆
 paramAnnotationsI
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¿ ¡(‘
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañ ó(‘
 —
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaø ø(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï(
 %3"
 __annotate*75
 3org.springframework.web.bind.annotation.PostMapping*9
@@ -71,7 +71,7 @@ __annotate*75
 file/org.springframework.web.multipart.MultipartFile’
 “
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¿  ¿(5
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañ  ñ(5
 %4"
 __annotate*86
 4org.springframework.web.bind.annotation.RequestParam*9
@@ -79,7 +79,7 @@ __annotate*86
 file/org.springframework.web.multipart.MultipartFile•
 ¢
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¿D ¿(H7
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañD ñ(H7
 file/org.springframework.web.multipart.MultipartFile"__annotation*
 
 %3*
@@ -87,7 +87,7 @@ I
 %4Ò
 Ó
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaø ø(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï(
 %5"
 __annotate*75
 3org.springframework.web.bind.annotation.PostMapping*V
@@ -95,13 +95,13 @@ T
 redirectAttributes>org.springframework.web.servlet.mvc.support.RedirectAttributes∫
 ∑
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¿] ¿(oT
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javañ] ñ(oT
 redirectAttributes>org.springframework.web.servlet.mvc.support.RedirectAttributes"__annotation*
 
 %5∆
 √
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaø ø(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaï ï(
 %6"
 __annotate*75
 3org.springframework.web.bind.annotation.PostMapping*+
@@ -109,90 +109,96 @@ __annotate*75
 sessionjavax.servlet.http.HttpSessionè
 å
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java¡ ¡()
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaó ó()
 sessionjavax.servlet.http.HttpSession"__annotation*
 
 %6*
 16*´
 1I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java◊	 ◊("[
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠	 ≠("[
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java◊ ◊(
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java≠ ≠(
 
 redirect:/*¨
 5I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÀ À("÷”
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java° °("÷”
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÀ À(#
-%18void",service.UserService#addAvatar(Lmodel/User;)V*
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java° °(#
+%19void",service.UserService#addAvatar(Lmodel/User;)V*
 
-%17service.UserService*
+%18service.UserService*
 
 user
 model.User2addAvatar(Lmodel/User;)*
 1*Æ
 6I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÀ À(ÿ’
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java° °(ÿ’
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaÀ À(
-%17service.UserService"=controller.MyController#getUserService()Lservice/UserService;*
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java° °(
+%18service.UserService"=controller.MyController#getUserService()Lservice/UserService;*
 controller.MyController2getUserService()*
-5*¿
+5*Ë
 7I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java… …(*¢
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaü ü(*¢
 ü
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java… …(*%
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaü ü(*%
 imagejava.awt.image.BufferedImage"__id*%
 #
-%15java.awt.image.BufferedImage≈¬
+%15java.awt.image.BufferedImageñ
+ì
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java   ((
-%16void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java† †(
+%16java.lang.String"__id*'*%
+controller.MyController"
+AVATAR‘—
+I
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java† †(&
+%17void"Rjavax.servlet.http.HttpSession#setAttribute(Ljava/lang/String;Ljava/lang/Object;)V*+
 )
-sessionjavax.servlet.http.HttpSession*
-
-avatar*'
+sessionjavax.servlet.http.HttpSession*
+
+%16java.lang.String*'
 %
 imagejava.awt.image.BufferedImage22setAttribute(Ljava/lang/String;Ljava/lang/Object;)*
 6*‚
 8I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(7ç
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(7ç
 ä
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(7
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(7
 injava.io.InputStream"__id*
 
 %14java.io.InputStream¸
 ˘
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java… …()#
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaü ü()#
 %15java.awt.image.BufferedImage"Ojavax.imageio.ImageIO#read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;*"
 javax.imageio.ImageIO*
 
 injava.io.InputStream*
 7*°
 9I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(6À»
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(6À»
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(6
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(6
 %14java.io.InputStream"4java.sql.Blob#getBinaryStream()Ljava/io/InputStream;*
 
 %13java.sql.Blob2getBinaryStream()*
 8*Ö
 10I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »(Æ´
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û(Æ´
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java» »($
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaû û($
 %13java.sql.Blob"%model.User#getAvatar()Ljava/sql/Blob;*
 
 user
 model.User2getAvatar()*
 9*∫
 11I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java« «(2‚ﬂ
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(2‚ﬂ
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java« «(2
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(2
 %12void"&model.User#setAvatar(Ljava/sql/Blob;)V*
 
 user
@@ -201,13 +207,13 @@ model.User*+
 %10"javax.sql.rowset.serial.SerialBlob2setAvatar(Ljava/sql/Blob;)*
 10*∫
 12I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java« «(1ùö
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(1ùö
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java« «( )
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù( )
 %10"javax.sql.rowset.serial.SerialBlob""javax.sql.rowset.serial.SerialBlob¬
 ø
 I
-=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.java« «(1
+=C:\Users\ikorm\git\MUffinGIT\src\controller\MyController.javaù ù(1
 %11".javax.sql.rowset.serial.SerialBlob#<init>([B)V*+
 )
 %10"javax.sql.rowset.serial.SerialBlob*

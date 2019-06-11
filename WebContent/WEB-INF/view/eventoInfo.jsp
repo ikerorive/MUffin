@@ -1,7 +1,7 @@
 <%@page import="java.util.*"%>
 <%@page import="model.Evento"%>
 <%
-	// retrieve your list from the request, with casting 
+
 	Evento evt = (Evento) session.getAttribute("selectedEvent");
 %>
 <link rel="stylesheet"
@@ -19,7 +19,7 @@
 				out.println(evt.getName());
 			%>
 		</h1>
-		<small class="text-muted"><i class="far fa-clock"></i> <%
+		<small class="text-muted"><em class="far fa-clock"></em> <%
  	out.println(evt.getDate());
  %></small>
 		<p>
@@ -31,13 +31,11 @@
 	</div>
 	<div class="col-md-5">
 		<div>
-			<a data-toggle="modal" data-target="#userModal"> 15/20 <i
-				class="fas fa-users"></i>
+			<a data-toggle="modal" data-target="#userModal"> <span
+				id="asistentes"></span>/<%
+ 	out.println(evt.getMaxSize());
+ %> <em class="fas fa-users"></em>
 			</a>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 75%"
-					aria-valuenow="15" aria-valuemin="0" aria-valuemax="20"></div>
-			</div>
 		</div>
 		<br>
 		<div id="mapid" style="width: 100%; height: 400px;"></div>
@@ -82,22 +80,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<!--  	<p>peio23</p>
-				<p>mikel_mkl</p>
-				<p>anderp2</p>
-				<p>aitor33</p>
-				<p>jonM</p>
-				<p>ikerw</p>
-				<p>wunguyungu</p>
-				<p>thelegend27</p>
-				<p>marro4</p>
-				<p>borj3nzz</p>
-				<p>qwer</p>
-				<p>wakaso</p>
-				<p>donMubarak</p>
-				<p>erBixo</p>
-				<p>cabesa</p>
-				-->
+				<!-- Personas suscritas	-->
 
 			</div>
 			<div class="modal-footer">
@@ -113,15 +96,16 @@
 	$(document)
 			.ready(
 					function() {
-						fetch(
-								"http://localhost:8080/cambiarEventosServer/webresources/generic/uno",
-								{
+							fetch(
+									"http://localhost:8080/Muffin.v.2/webresources/generic/getCantidadEvento?evento="+<%out.print(evt.getIdEvento());%>,
+									{
 
-								}).then(function(response) {
-							response.text().then(function(text) {
-								console.log("RESPUESTA----> " + text);
+									}).then(function(response) {
+								response.text().then(function(text) {
+									$("#asistentes").text(text);
+									console.log("RESPUESTA----> " + text);
 
-							});
+								});
 						})
 
 					});

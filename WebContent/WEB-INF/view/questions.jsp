@@ -3,7 +3,6 @@
 
 <div class="cards-container row d-flex justify-content-center m-2">
 	<%
-		// retrieve your list from the request, with casting 
 		List<Questions> list = (List<Questions>) session.getAttribute("questions");
 
 		for (Questions qts : list) {

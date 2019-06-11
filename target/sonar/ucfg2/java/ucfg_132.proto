@@ -1,46 +1,17 @@
 
-8service.impl.UserServiceImpl#registerUser(Lmodel/User;)ZL
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java( (("paramAnnotations*
-3L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java) )(Ã…
-L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java* *(!
-%0dao.UserDAO"6service.impl.UserServiceImpl#getUserDAO()Ldao/UserDAO;* 
-service.impl.UserServiceImpl2getUserDAO()»≈
-L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java* *(0
-%1boolean"#dao.UserDAO#saveUser(Lmodel/User;)Z*
-
-%0dao.UserDAO*
-
-user
-model.User2saveUser(Lmodel/User;)*
-1*ı
-paramAnnotationsL
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java( (('ë
-é
-L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java' '(
-
-%2"
-__annotate*
-java.lang.Override*
-
-user
-model.Userz
-x
-L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java(" ((&
-user
-model.User"__annotation*
-
-%2*
-3*©
-1L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java-	 -("V
-L
-BC:\Users\ikorm\git\MUffinGIT\src\service\impl\UserServiceImpl.java- -(
-"":
-user
-model.UserB 
-service.impl.UserServiceImpl
+4model.UserCredential#getUsername()Ljava/lang/String;D
+:C:\Users\ikorm\git\MUffinGIT\src\model\UserCredential.java ("1*Ω
+1D
+:C:\Users\ikorm\git\MUffinGIT\src\model\UserCredential.java	 (è
+å
+D
+:C:\Users\ikorm\git\MUffinGIT\src\model\UserCredential.java	 (
+%0java.lang.String"__id*&*$
+model.UserCredential"
+
+username"`
+D
+:C:\Users\ikorm\git\MUffinGIT\src\model\UserCredential.java (
+
+%0java.lang.StringB
+model.UserCredential

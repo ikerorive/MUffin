@@ -1,17 +1,16 @@
 
-,model.Evento#getLatitude()Ljava/lang/String;<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaJ J("1*›
-1<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaK	 K(~
-|
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaK	 K(
-%0java.lang.String"__id**
-model.Evento"
-
-latitude"X
-<
-2C:\Users\ikorm\git\MUffinGIT\src\model\Evento.javaK K(
-
-%0java.lang.StringB
-model.Evento
+0json.Respuesta#getPregunta2()Ljava/lang/Integer;>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java ("1*¨
+1>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (…
+‚
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (
+%0java.lang.Integer"__id*!*
+json.Respuesta"
+	pregunta2"[
+>
+4C:\Users\ikorm\git\MUffinGIT\src\json\Respuesta.java (
+
+%0java.lang.IntegerB
+json.Respuesta

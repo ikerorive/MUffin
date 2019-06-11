@@ -5,7 +5,6 @@
 <div class="row justify-content-center">
 
 	<%
-		// retrieve your list from the request, with casting 
 		List<Evento> list = (List<Evento>) session.getAttribute("eventos");
 
 		for (Evento evt : list) {
@@ -29,7 +28,7 @@
 						out.println(evt.getName());
 					%>
 				</h1>
-				<img src='<%out.println(evt.getImgUrl());%>' class='w-100'>
+				<img src='<%out.println(evt.getImgUrl());%>' alt="fondoEvento" class='w-100'>
 			</div>
 			<div class="back">
 				<div class="card-body text-center">
@@ -44,11 +43,7 @@
  %>
 						</span>
 					</p>
-					<p>
-						<i class="fas fa-user-check"></i> 22/<%
-							out.println(evt.getMaxSize());
-						%>
-					</p>
+					
 					<form method="POST" enctype="multipart/form-data"
 						action="selectEventSuccess">
 						<input type="hidden" name="eventId"
@@ -75,7 +70,6 @@
 var longitude;
 var latitude;
 $(document).ready(function(){
-	// your code
 		f();
 	});
 
@@ -127,8 +121,6 @@ function distance(lat1,lon1,lat2,lon2) {
 		Math.sin(dLon/2) * Math.sin(dLon/2);
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 	var d = R * c;
-	//if (d>1) return Math.round(d)+"km";
-	//else if (d<=1) return Math.round(d*1000)+"m";
 	return Math.round(d);
 }
 </script>

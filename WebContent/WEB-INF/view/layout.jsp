@@ -15,8 +15,6 @@
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 <!-- Bootstrap core CSS -->
-<!--  <link href="resources/MDB-Free_4.6.0/css/bootstrap.min.css"
-	rel="stylesheet">-->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <!-- Material Design Bootstrap -->
@@ -32,7 +30,7 @@
 </head>
 <body>
 
-	<img src="resources/img/party2.jpg" class="bg" />
+	<img src="resources/img/party2.jpg" class="bg" alt="background" />
 
 	<div align="right">
 		<tiles:insertAttribute name="header" />
@@ -44,8 +42,6 @@
 	<div class="bottom">
 		<tiles:insertAttribute name="footer" />
 	</div>
-
-	<!--  <img src="resources/img/fun.png" class="fix" /> -->
 
 </body>
 </html>
